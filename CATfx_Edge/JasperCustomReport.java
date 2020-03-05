@@ -172,4 +172,11 @@ public class JasperCustomReport {
            // exporter.setParameter(JRExporterParameter.OUTPUT_STREAM, new FileOutputStream(output_path+"/"+mapName+".pdf"));
             //exporter.exportReport();
             System.out.println("Exported Successfully");
-    
+            sb.append("ReportCreated sucessfully");
+        } catch (JRException ex) {
+            Logger.getLogger(JasperCustomReport.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return sb;
+
+    }
+}
