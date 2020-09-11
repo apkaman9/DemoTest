@@ -1,0 +1,3933 @@
+SCRIPT_VERSION=4.2,  
+JobType= Big_Data_Batch, 
+Framework= Spark,
+DEFAULT_CONTEXT: Default,  
+ContextType {  
+NAME: Default  
+addContextParameter {
+		NAME: DB_Sflake_snowflake_Account,
+		TYPE: "id_String",
+		VALUE: "sa",
+		COMMENT: "",
+         PROMPT: "DB_Sflake_snowflake_Account?"	}
+addContextParameter {
+		NAME: tgt_table_emp,
+		TYPE: "id_String",
+		VALUE: "emp",
+		COMMENT: "",
+         PROMPT: "tgt_table_emp?"	}
+addContextParameter {
+		NAME: DB_Sflake_snowflake_Password,
+		TYPE: "id_String",
+		VALUE: "goerwin@1",
+		COMMENT: "",
+         PROMPT: "DB_Sflake_snowflake_Password?"	}
+addContextParameter {
+		NAME: DB_Sflake_snowflake_Database,
+		TYPE: "id_String",
+		VALUE: "MOVIES",
+		COMMENT: "",
+         PROMPT: "DB_Sflake_snowflake_Database?"	}
+addContextParameter {
+		NAME: src_db_movies,
+		TYPE: "id_String",
+		VALUE: "movies",
+		COMMENT: "",
+         PROMPT: "src_db_movies?"	}
+addContextParameter {
+		NAME: tgt_table_cust,
+		TYPE: "id_String",
+		VALUE: "cust",
+		COMMENT: "",
+         PROMPT: "tgt_table_cust?"	}
+addContextParameter {
+		NAME: src_table_actor,
+		TYPE: "id_String",
+		VALUE: "actor",
+		COMMENT: "",
+         PROMPT: "src_table_actor?"	}
+addContextParameter {
+		NAME: DB_Sflake_snowflake_Username,
+		TYPE: "id_String",
+		VALUE: "sa",
+		COMMENT: "",
+         PROMPT: "DB_Sflake_snowflake_Username?"	}
+addContextParameter {
+		NAME: tgt_db_movies,
+		TYPE: "id_String",
+		VALUE: "movies",
+		COMMENT: "",
+         PROMPT: "tgt_db_movies?"	}
+addContextParameter {
+		NAME: DB_Sflake_snowflake_Schema,
+		TYPE: "id_String",
+		VALUE: "MOVIES.DBO",
+		COMMENT: "",
+         PROMPT: "DB_Sflake_snowflake_Schema?"	}
+addContextParameter {
+		NAME: DB_Sflake_snowflake_Warehouse,
+		TYPE: "id_String",
+		VALUE: "sa",
+		COMMENT: "",
+         PROMPT: "DB_Sflake_snowflake_Warehouse?"	}
+addContextParameter {
+		NAME: src_table_cust_credit,
+		TYPE: "id_String",
+		VALUE: "cust_credit",
+		COMMENT: "",
+         PROMPT: "src_table_cust_credit?"	}
+}  
+addParameters {  
+addElementParameters {  
+JOB_RUN_VM_ARGUMENTS : " -Xms256M -Xmx1024M",  
+SCREEN_OFFSET_X : "0",  
+SCREEN_OFFSET_Y : "0",,,,,,,,,,,,,,,, 
+IMPLICITCONTEXT_USE_PROJECT_SETTINGS : "true",
+STATANDLOG_USE_PROJECT_SETTINGS : "true", 
+MULTI_THREAD_EXECATION : "false",  
+PARALLELIZE_UNIT_SIZE : "25000",  
+IMPLICIT_TCONTEXTLOAD : "false",  
+FROM_FILE_FLAG_IMPLICIT_CONTEXT : "false", 
+FROM_DATABASE_FLAG_IMPLICIT_CONTEXT : "false", 
+IMPLICIT_TCONTEXTLOAD_FILE : "\"\"", 
+FIELDSEPARATOR :  "\"\""  
+URL_IMPLICIT_CONTEXT : """",,  
+DRIVER_CLASS_IMPLICIT_CONTEXT : """",  
+HOST_IMPLICIT_CONTEXT : """",  
+PORT_IMPLICIT_CONTEXT : """",  
+DBNAME_IMPLICIT_CONTEXT : """",  
+LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT : """",  
+PROPERTIES_IMPLICIT_CONTEXT : """",  
+SCHEMA_DB_IMPLICIT_CONTEXT : """",  
+USER_IMPLICIT_CONTEXT : """",  
+PASS_IMPLICIT_CONTEXT : "0RMsyjmybrE=",  
+DBFILE_IMPLICIT_CONTEXT : """",  
+DBTABLE_IMPLICIT_CONTEXT : """",  
+QUERY_CONDITION_IMPLICIT_CONTEXT : """",  
+LOAD_NEW_VARIABLE : "Warning",  
+NOT_LOAD_OLD_VARIABLE : "Warning",  
+PRINT_OPERATIONS : "false",  
+DISABLE_ERROR : "false",  
+DISABLE_WARNINGS : "false",  
+DISABLE_INFO : "false",  
+ON_STATCATCHER_FLAG : "false",  
+ON_LOGCATCHER_FLAG : "false",  
+ON_METERCATCHER_FLAG : "false",  
+ON_CONSOLE_FLAG : "false",  
+ON_FILES_FLAG : "false",  
+FILE_PATH : ""/home/talend/workspace/.metadata"",  
+FILENAME_STATS : ""stats_file.txt"",  
+FILENAME_LOGS : ""logs_file.txt"",  
+FILENAME_METTER : ""meter_file.txt"",  
+ENCODING : "ISO-8859-15",  
+ENCODING:ENCODING_TYPE : "ISO-8859-15",  
+ON_DATABASE_FLAG : "false",  
+DB_TYPE : "tJDBCOutput",  
+DB_VERSION : "ORACLE_11",  
+URL : """",,  
+DRIVER_CLASS : """",  
+HOST : """",  
+PORT : """",  
+DATASOURCE : """",  
+DBNAME : """",  
+LOCAL_SERVICE_NAME : """",  
+PROPERTIES : """",  
+SCHEMA_DB : """",  
+USER : """",  
+PASS : "0RMsyjmybrE=",  
+DBFILE : """",  
+TABLE_STATS : """",  
+TABLE_LOGS : """",  
+TABLE_METER : """",  
+CATCH_RUNTIME_ERRORS : "true",  
+CATCH_USER_ERRORS : "true",  
+CATCH_USER_WARNING : "true",  
+CATCH_REALTIME_STATS : "false",,  
+HEADER_ENABLED : "false",,,,,  
+FOOTER_ENABLED : "false",,,,  
+SPARK_LOCAL_MODE : "true",  
+SPARK_LOCAL_VERSION : "SPARK_2_2_0",  
+SPARK_VERSION : "EMR_5_8_0",  
+SUPPORTED_SPARK_VERSION : "SPARK_2_2_0",,,  
+NOTE : "** The version of Spark must be 1.3.0 or later.",  
+SPARK_API_VERSION : "SPARK_200",  
+SET_HDP_VERSION : "false",  
+HDP_VERSION : ""x.x.x.x-x"",  
+SPARK_MODE : "CLUSTER",  
+RESOURCE_MANAGER : """",  
+SET_SCHEDULER_ADDRESS : "false",  
+RESOURCEMANAGER_SCHEDULER_ADDRESS : """",  
+SET_JOBHISTORY_ADDRESS : "false",  
+JOBHISTORY_ADDRESS : """",  
+SET_STAGING_DIRECTORY : "false",  
+STAGING_DIRECTORY : ""/user"",  
+HDINSIGHT_ENDPOINT : ""https://xxxx.azurehdinsight.net"",  
+HDINSIGHT_USERNAME : """",  
+HDINSIGHT_PASSWORD : "0RMsyjmybrE=",  
+LIVY_HOST : """",  
+LIVY_PORT : ""443"",  
+LIVY_USERNAME : """",  
+HDINSIGHT_USERNAME : """",  
+HDINSIGHT_PASSWORD : "0RMsyjmybrE=",  
+WASB_HOST : """",  
+WASB_CONTAINER : """",  
+WASB_USERNAME : """",  
+WASB_PASSWORD : "0RMsyjmybrE=",  
+REMOTE_FOLDER : """",  
+SPARK_HOST : ""spark://localhost:7077"",  
+SPARK_HOME : ""/usr/lib/spark"",  
+DEFINE_HADOOP_HOME_DIR : "false",  
+HADOOP_HOME_DIR : ""C:/Talend/winutils"",  
+DEFINE_SPARK_DRIVER_HOST : "false",  
+SPARK_DRIVER_HOST : ""127.0.0.1"",  
+GOOGLE_PROJECT_ID : ""my-google-project"",  
+GOOGLE_CLUSTER_ID : ""my-cluster-id"",  
+GOOGLE_REGION : ""global"",  
+GOOGLE_JARS_BUCKET : ""gs://my-bucket/talend/jars"",  
+DEFINE_PATH_TO_GOOGLE_CREDENTIALS : "false",  
+PATH_TO_GOOGLE_CREDENTIALS : """",  
+ALTUS_SET_CREDENTIALS : "false",  
+ALTUS_ACCESS_KEY : """",  
+ALTUS_SECRET_KEY : """",  
+ALTUS_CLI_PATH : ""/opt/altuscli/altusclienv/bin/altus"",  
+ALTUS_REUSE_CLUSTER : "false",  
+ALTUS_CLUSTER_NAME : ""talend-altus-cluster"",  
+ALTUS_CLOUD_PROVIDER : ""AWS"",  
+ALTUS_ENVIRONMENT_NAME : ""talend-altus-cluster"",  
+ALTUS_DELETE_AFTER_EXECUTION : "false",  
+ALTUS_S3_ACCESS_KEY : """",  
+ALTUS_S3_SECRET_KEY : "0RMsyjmybrE=",  
+ALTUS_S3_REGION : ""us-east-1"",  
+ALTUS_BUCKET_NAME : ""my-bucket"",  
+ALTUS_JARS_BUCKET : ""talend/jars/"",  
+ALTUS_AZURE_ADLS_ACCOUNT_FQDN : ""xxxx.azuredatalakestore.net"",  
+ALTUS_AZURE_APP_ID : """",  
+ALTUS_AZURE_TOKEN_ENDPOINT : "0RMsyjmybrE=",  
+ALTUS_AZURE_APP_KEY : "0RMsyjmybrE=",  
+ALTUS_USE_CUSTOM_JSON : "false",  
+ALTUS_CUSTOM_JSON : "{}",  
+ALTUS_INSTANCE_TYPE : ""c4.2xlarge"",  
+ALTUS_AZURE_INSTANCE_TYPE : ""STANDARD_DS12_V2"",  
+ALTUS_WORKER_NODE : ""10"",,,  
+ALTUS_CLOUDERA_MANAGER_USERNAME : ""altus"",,  
+USE_KRB : "false",  
+RESOURCEMANAGER_PRINCIPAL : "yarn/_HOST@EXAMPLE.COM",  
+JOBHISTORY_PRINCIPAL : "mapred/_HOST@EXAMPLE.COM",  
+USE_KEYTAB : "false",  
+PRINCIPAL : ""hdfs"",  
+KEYTAB_PATH : "/tmp/hdfs.headless.keytab",  
+USERNAME : """",  
+USE_MAPRTICKET : "false",  
+MAPRTICKET_PASSWORD : "0RMsyjmybrE=",  
+MAPRTICKET_CLUSTER : "demo.mapr.com",  
+MAPRTICKET_DURATION : "86400L",  
+SET_MAPR_HOME_DIR : "false",  
+MAPR_HOME_DIR : "/opt/mapr",  
+SET_HADOOP_LOGIN : "false",  
+HADOOP_LOGIN : "kerberos",  
+ADVANCED_SETTINGS_CHECK : "false",  
+SPARK_DRIVER_MEM : "512m",  
+SPARK_DRIVER_CORES : "1",  
+SPARK_YARN_AM_SETTINGS_CHECK : "false",  
+SPARK_YARN_AM_MEM : "512m",  
+SPARK_YARN_AM_CORES : "1",  
+SPARK_EXECUTOR_MEM : "512m",  
+SET_SPARK_EXECUTOR_MEM_OVERHEAD : "false",  
+SPARK_EXECUTOR_MEM_OVERHEAD : "384",  
+SPARK_EXECUTOR_CORES_CHECK : "false",  
+SPARK_EXECUTOR_CORES : "1",  
+SPARK_YARN_ALLOC_TYPE : "AUTO",  
+SPARK_EXECUTOR_INSTANCES : "2",  
+SPARK_YARN_DYN_INIT : "1",  
+SPARK_YARN_DYN_MIN : "0",  
+SPARK_YARN_DYN_MAX : "MAX",  
+WEB_UI_PORT_CHECK : "false",  
+WEB_UI_PORT : "4040",  
+SPARK_BROADCAST_FACTORY : "AUTO",  
+CUSTOMIZE_SPARK_SERIALIZER : "false",  
+SPARK_SERIALIZER : "org.apache.spark.serializer.KryoSerializer",  
+ENABLE_SPARK_EVENT_LOGGING : "false",  
+COMPRESS_SPARK_EVENT_LOGS : "false",  
+SPARK_EVENT_LOG_DIR : "hdfs://namenode:8020/user/spark/applicationHistory", 
+SPARKHISTORY_ADDRESS : "sparkHistoryServer:18080",  
+SPARK_SCRATCH_DIR : "\"/tmp\"",  
+WAIT_FOR_THE_JOB_TO_COMPLETE : "true",  
+USE_CHECKPOINT : "false",  
+CHECKPOINT_DIR : "file:///tmp/mycheckpoint",,  
+USE_CLOUDERA_NAVIGATOR : "false",  
+CLOUDERA_NAVIGATOR_USERNAME : "username",  
+CLOUDERA_NAVIGATOR_PASSWORD : "PoLvNyVG2XWndNDdLn696A==",  
+CLOUDERA_NAVIGATOR_URL : ""http://localhost:7187/api/v8/"",  
+CLOUDERA_NAVIGATOR_METADATA_URL :  
+""http://localhost:7187/api/v8/metadata/plugin"",  
+CLOUDERA_NAVIGATOR_CLIENT_URL : ""http://localhost"",  
+CLOUDERA_NAVIGATOR_AUTOCOMMIT : "false",  
+CLOUDERA_NAVIGATOR_DISABLE_SSL_VALIDATION : "false",  
+CLOUDERA_NAVIGATOR_DIE_ON_ERROR : "true",  
+USE_ATLAS : "false",  
+ATLAS_URL : ""http://localhost:21000"",  
+ATLAS_USERNAME : ""admin"",  
+ATLAS_PASSWORD : "0RMsyjmybrE=",  
+SET_ATLAS_APPLICATION_PROPERTIES : "false",  
+ATLAS_APPLICATION_PROPERTIES :  
+""/user/atlas/atlas-application.properties"",  
+ATLAS_DIE_ON_ERROR : "false"  
+}  
+addRoutinesParameters {  
+addRoutinesParameter {  
+NAME: "DataOperation"  
+}  
+addRoutinesParameter {  
+NAME: "Mathematical"  
+}  
+addRoutinesParameter {  
+NAME: "Numeric"  
+}  
+addRoutinesParameter {  
+NAME: "Relational"  
+}  
+addRoutinesParameter {  
+NAME: "SQLike"  
+}  
+addRoutinesParameter {  
+NAME: "StringHandling"  
+}  
+addRoutinesParameter {  
+NAME: "TalendDataGenerator"  
+}  
+addRoutinesParameter {  
+NAME: "TalendDate"  
+}  
+addRoutinesParameter {  
+NAME: "TalendString"  
+}  
+addRoutinesParameter {  
+NAME: "DQTechnical"  
+}
+addRoutinesParameter {
+NAME: "DataMasking"
+}
+addRoutinesParameter {
+NAME: "DataQualityDependencies"
+}
+addRoutinesParameter {
+NAME: "DataQuality"
+}
+addRoutinesParameter {
+NAME: "DqStringHandling"
+}
+addRoutinesParameter {
+NAME: "TalendStringUtil"
+}
+}  
+}  
+addComponent {
+	setComponentDefinition {
+		TYPE: "tSnowflakeConfiguration",
+		NAME: "tSnowflakeConfiguration_1",
+		POSITION: 364, 64,
+		SIZE: 32, 32,
+		OFFSETLABEL: 0, 0
+	}
+	setSettings {
+		NOTE :
+		"Warning! This component does not support running on Spark 1.3. Please choose one of the following Spark versions: 2.0, 2.1, 2.2, 2.3, 2.4",
+		NOTE :
+		"Warning! This component does not support running on Spark 1.4. Please choose one of the following Spark versions: 2.0, 2.1, 2.2, 2.3, 2.4",
+		NOTE :
+		"Warning! This component does not support running on Spark 1.5. Please choose one of the following Spark versions: 2.0, 2.1, 2.2, 2.3, 2.4",
+		NOTE :
+		"Warning! This component does not support running on Spark 1.6. Please choose one of the following Spark versions: 2.0, 2.1, 2.2, 2.3, 2.4",
+		ACCOUNT : "context.DB_Sflake_snowflake_Account",
+		REGION : "AWS_US_WEST",
+		USER : "context.DB_Sflake_snowflake_Username",
+		PASS : "context.DB_Sflake_snowflake_Password",
+		DBNAME : "context.DB_Sflake_snowflake_Database",
+		DBSCHEMA : "context.DB_Sflake_snowflake_Schema",
+		WAREHOUSE : "context.DB_Sflake_snowflake_Warehouse",
+		SPARK_CONFIGURATION : "tSparkConfiguration_1",
+		USE_CUSTOM_REGION : "false",
+		CUSTOM_REGION : "\"\"",
+		LABEL : "tSnowflakeConfiguration_1",
+		CONNECTION_FORMAT : "row"
+	}
+}addComponent {  
+setComponentDefinition {  
+TYPE: "tSnowflakeInput",  
+NAME:"tSnowflakeInput_1",  
+POSITION: 352, 220,  
+SIZE: 32, 32,  
+OFFSETLABEL: 0, 0  
+}  
+setSettings {  
+START : "true",  
+USE_EXISTING_CONNECTION : "true",,  
+HOST : "\"localhost\"",  
+TYPE : "Snowflake",  
+PORT : "\"443\"",  
+CONNECTION : "tSnowflakeConfiguration_1",  
+DB_SCHEMA : "\"movies\"",  
+DBNAME : "context.src_db_movies",  
+USER : "\"sa\"",  
+PASS : "\"goerwin@1\"",
+TABLE :  "\"MOVIES.DBO.ACTOR\"",  
+QUERYSTORE : "\"\"",,  
+QUERYSTORE:QUERYSTORE_TYPE : "BUILT_IN",  
+GUESS_SCHEMA : "\"\"",  
+QUERY : "\"select ACTOR_ID, ACTOR_NAME, DOB, FIRSTNAME, LASTNAME, MOVIE_NUMBER from 
+MOVIES.DBO.ACTOR \"",  
+MAPPING : "id_MSSQL",  
+PROPERTIES : "\"noDatetimeStringSync=true\"",  
+ENCODING : "\"ISO-8859-15\"",  
+ENCODING:ENCODING_TYPE : "ISO-8859-15",  
+TRIM_ALL_COLUMN : "false",  
+LABEL : "actor_snowflake",  
+TRIM_COLUMN {                          
+SCHEMA_COLUMN :  "ACTOR_ID",  
+TRIM : "false",
+SCHEMA_COLUMN :  "ACTOR_NAME",  
+TRIM : "false",
+SCHEMA_COLUMN :  "DOB",  
+TRIM : "false",
+SCHEMA_COLUMN :  "FIRSTNAME",  
+TRIM : "false",
+SCHEMA_COLUMN :  "LASTNAME",  
+TRIM : "false",
+SCHEMA_COLUMN :  "MOVIE_NUMBER",  
+TRIM : "false"
+} ,  
+CONNECTION_FORMAT : "row",  
+INFORMATION : "false",  
+VALIDATION_RULES : "false"  
+}                          
+addSchema {                          
+NAME: "DBO.ACTOR",  
+TYPE: "FLOW"  
+addColumn { 
+NAME: "ACTOR_ID",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_ID",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "ACTOR_NAME",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 255,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_NAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "DOB",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "DOB",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "FIRSTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "FIRSTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "LASTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "LASTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "MOVIE_NUMBER",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "MOVIE_NUMBER",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+
+}                          
+}                          
+addComponent {  
+setComponentDefinition {  
+TYPE: "tSnowflakeInput",  
+NAME:"tSnowflakeInput_2",  
+POSITION: 902, 620,  
+SIZE: 32, 32,  
+OFFSETLABEL: 0, 0  
+}  
+setSettings {  
+START : "true",  
+USE_EXISTING_CONNECTION : "true",,  
+HOST : "\"localhost\"",  
+TYPE : "Snowflake",  
+PORT : "\"443\"",  
+CONNECTION : "tSnowflakeConfiguration_1",  
+DB_SCHEMA : "\"movies\"",  
+DBNAME : "context.src_db_movies",  
+USER : "\"sa\"",  
+PASS : "\"goerwin@1\"",
+TABLE :  "\"MOVIES.DBO.CUST_CREDIT\"",  
+QUERYSTORE : "\"\"",,  
+QUERYSTORE:QUERYSTORE_TYPE : "BUILT_IN",  
+GUESS_SCHEMA : "\"\"",  
+QUERY : "\"select CREDIT_CARD, CREDIT_CARD_EXP, CUST_NUMBER from 
+MOVIES.DBO.CUST_CREDIT \"",  
+MAPPING : "id_MSSQL",  
+PROPERTIES : "\"noDatetimeStringSync=true\"",  
+ENCODING : "\"ISO-8859-15\"",  
+ENCODING:ENCODING_TYPE : "ISO-8859-15",  
+TRIM_ALL_COLUMN : "false",  
+LABEL : "cust_credit_snowflake",  
+TRIM_COLUMN {                          
+SCHEMA_COLUMN :  "CREDIT_CARD",  
+TRIM : "false",
+SCHEMA_COLUMN :  "CREDIT_CARD_EXP",  
+TRIM : "false",
+SCHEMA_COLUMN :  "CUST_NUMBER",  
+TRIM : "false"
+} ,  
+CONNECTION_FORMAT : "row",  
+INFORMATION : "false",  
+VALIDATION_RULES : "false"  
+}                          
+addSchema {                          
+NAME: "DBO.CUST_CREDIT",  
+TYPE: "FLOW"  
+addColumn { 
+NAME: "CREDIT_CARD",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CREDIT_CARD_EXP",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD_EXP",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CUST_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+         } 
+
+}                          
+}                          
+addComponent {  
+setComponentDefinition {  
+TYPE: "tSnowflakeInput",  
+NAME:"tSnowflakeInput_3",  
+POSITION: 1752, 420,  
+SIZE: 32, 32,  
+OFFSETLABEL: 0, 0  
+}  
+setSettings {  
+START : "true",  
+USE_EXISTING_CONNECTION : "true",,  
+HOST : "\"localhost\"",  
+TYPE : "Snowflake",  
+PORT : "\"443\"",  
+CONNECTION : "tSnowflakeConfiguration_1",  
+DB_SCHEMA : "\"movies\"",  
+DBNAME : "context.src_db_movies",  
+USER : "\"sa\"",  
+PASS : "\"goerwin@1\"",
+TABLE :  "\"MOVIES.DBO.EMP\"",  
+QUERYSTORE : "\"\"",,  
+QUERYSTORE:QUERYSTORE_TYPE : "BUILT_IN",  
+GUESS_SCHEMA : "\"\"",  
+QUERY : "\"select EMP_NUMBER from 
+MOVIES.DBO.EMP \"",  
+MAPPING : "id_MSSQL",  
+PROPERTIES : "\"noDatetimeStringSync=true\"",  
+ENCODING : "\"ISO-8859-15\"",  
+ENCODING:ENCODING_TYPE : "ISO-8859-15",  
+TRIM_ALL_COLUMN : "false",  
+LABEL : "emp_snowflake",  
+TRIM_COLUMN {                          
+SCHEMA_COLUMN :  "EMP_NUMBER",  
+TRIM : "false"
+} ,  
+CONNECTION_FORMAT : "row",  
+INFORMATION : "false",  
+VALIDATION_RULES : "false"  
+}                          
+addSchema {                          
+NAME: "DBO.EMP",  
+TYPE: "FLOW"  
+addColumn { 
+NAME: "EMP_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMP_NUMBER",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+
+}                          
+}                          
+addComponent {
+setComponentDefinition {
+TYPE: "tSortRow",
+NAME: "tSortRow_1",
+POSITION: 652, 220 ,
+SIZE: 32, 32,
+OFFSETLABEL: 0, 0
+}
+setSettings {
+CRITERIA {
+COLNAME : "ACTOR_NAME",
+SORT : "alpha",
+ORDER : "asc"
+},
+
+CONNECTION_FORMAT : "row"
+}
+addSchema {
+NAME: "tSortRow_1",
+CONNECTOR: "FLOW"
+addColumn { 
+NAME: "ACTOR_ID",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_ID",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "ACTOR_NAME",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 255,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_NAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "DOB",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "DOB",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "FIRSTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "FIRSTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "LASTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "LASTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "MOVIE_NUMBER",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "MOVIE_NUMBER",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+
+
+}
+}
+addComponent {
+setComponentDefinition {
+TYPE: "tFilterRow",
+NAME: "tFilterRow_1",
+POSITION: 902, 420 ,
+SIZE: 32, 32,
+OFFSETLABEL: 0, 0
+}
+setSettings {
+LOGICAL_OP : "&&",
+CONDITIONS {
+INPUT_COLUMN : "CREDIT_CARD",
+FUNCTION :"$source == null? false : $source.matches($target) $operator true",
+OPERATOR : "==",
+RVALUE : ""ABC""
+},
+
+USE_ADVANCED : "false",
+ADVANCED_COND :
+"// code sample : use input_row to define the condition.
+				//
+				input_row.columnName1.equals(\"foo\")||!(input_row.columnName2.equals(\"bar\"))
+				// replace the following expression by your own filter condition
+				input_row.columnName1.equals(input_row.columnName2)
+			",
+CONNECTION_FORMAT : "row"
+}
+addSchema {
+NAME: "tFilterRow_1",
+CONNECTOR: "FLOW"
+addColumn { 
+NAME: "CREDIT_CARD",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CREDIT_CARD_EXP",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD_EXP",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CUST_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+         } 
+
+
+}
+addSchema {
+NAME: "FILTER",
+CONNECTOR: "FILTER"
+addColumn { 
+NAME: "CREDIT_CARD",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CREDIT_CARD_EXP",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD_EXP",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CUST_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+         } 
+
+
+}
+addSchema {
+NAME: "REJECT",
+CONNECTOR: "REJECT"
+addColumn { 
+NAME: "CREDIT_CARD",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CREDIT_CARD_EXP",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD_EXP",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CUST_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+         } 
+
+
+addColumn {
+NAME: "errorMessage",
+TYPE: "id_String",
+NULLABLE: true,
+DEFAULTVALUE: "",
+LENGTH: 255,
+PRECISION: 0,
+SOURCETYPE: "",
+ORIGINALLEHGTH: -1
+}
+}
+}
+addComponent {
+ setComponentDefinition {
+     TYPE: "tMap",
+     NAME: "tMap_1",
+     POSITION: 902, 220 ,     SIZE: 32, 32,
+     OFFSETLABEL: 0, 0
+}
+ setSettings {
+     MAP : "",
+     LINK_STYLE : "AUTO",,
+     PREVIEW : "_qcyagHrCEeS565BvZTAhng-tMap_1-PREVIEW.bmp",
+     DIE_ON_ERROR : "true",
+     LKUP_PARALLELIZE : "false",
+     ROWS_BUFFER_SIZE : "2000000",
+     CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL : "false",
+     CONNECTION_FORMAT : "row",
+     INFORMATION : "false",,
+     VALIDATION_RULES : "false"
+  }
+ addSchema {
+ NAME: "tMap_1",
+  TYPE: "FLOW"
+addColumn { 
+NAME: "ACTOR_ID",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_ID",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "ACTOR_NAME",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 255,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_NAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "DOB",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "DOB",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "FIRSTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "FIRSTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "LASTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "LASTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "MOVIE_NUMBER",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "MOVIE_NUMBER",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+
+addColumn { 
+NAME: "CREDIT_CARD",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CREDIT_CARD_EXP",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD_EXP",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CUST_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+         } 
+
+   }
+addMapperData {
+         addUiProperties {
+         SHELLMAXIMIZED: false
+   }
+addInputTable {
+         NAME: "tSortRow_1",
+         SIZESTATE: INTERMEDIATE,
+         MATCHINGMODE: "UNIQUE_MATCH",
+         LOOKUPMODE: "LOAD_ONCE"
+addColumn { 
+         NAME: "ACTOR_ID",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "ACTOR_NAME",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "DOB",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "FIRSTNAME",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "LASTNAME",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "MOVIE_NUMBER",
+         TYPE: "id_String"
+} 
+    }
+ addInputTable {
+         NAME: "tFilterRow_1",
+ISINNERJOIN: true,         SIZESTATE: INTERMEDIATE,
+         ACTIVATECONDENSEDTOOL: true,
+         MATCHINGMODE: "UNIQUE_MATCH",
+         LOOKUPMODE: "LOAD_ONCE"
+addColumn { 
+         NAME: "CREDIT_CARD",
+         TYPE: "id_String",
+NULLABLE: true 
+         }
+addColumn { 
+         NAME: "CREDIT_CARD_EXP",
+         TYPE: "id_String",
+NULLABLE: true 
+         }
+addColumn { 
+         NAME: "CUST_NUMBER",
+         TYPE: "id_String",
+NULLABLE: false 
+, 
+EXPRESSION: "tSortRow_1.ACTOR_ID ",
+OPERATOR: "=" 
+         }
+    }
+     addVarTable {
+           NAME: "Var",
+           MINIMIZED: true,
+           SIZESTATE: INTERMEDIATE
+     }
+    addOutputTable {
+         ID: "",
+ NAME: "tMap_1",
+         SIZESTATE: INTERMEDIATE
+         addColumn {
+NAME: "ACTOR_ID",
+TYPE: "id_String",
+NULLABLE: true,
+EXPRESSION: "tSortRow_1.ACTOR_ID "
+         }
+         addColumn {
+NAME: "ACTOR_NAME",
+TYPE: "id_String",
+NULLABLE: false,
+EXPRESSION: "tSortRow_1.ACTOR_NAME "
+         }
+         addColumn {
+NAME: "DOB",
+TYPE: "id_String",
+NULLABLE: true,
+EXPRESSION: "tSortRow_1.DOB "
+         }
+         addColumn {
+NAME: "FIRSTNAME",
+TYPE: "id_String",
+NULLABLE: true,
+EXPRESSION: "tSortRow_1.FIRSTNAME "
+         }
+         addColumn {
+NAME: "LASTNAME",
+TYPE: "id_String",
+NULLABLE: true,
+EXPRESSION: "tSortRow_1.LASTNAME "
+         }
+         addColumn {
+NAME: "MOVIE_NUMBER",
+TYPE: "id_String",
+NULLABLE: false,
+EXPRESSION: "tSortRow_1.MOVIE_NUMBER "
+         }
+         addColumn {
+NAME: "CREDIT_CARD",
+TYPE: "id_String",
+NULLABLE: true,
+EXPRESSION: "tFilterRow_1.CREDIT_CARD "
+         }
+         addColumn {
+NAME: "CREDIT_CARD_EXP",
+TYPE: "id_String",
+NULLABLE: true,
+EXPRESSION: "tFilterRow_1.CREDIT_CARD_EXP "
+         }
+         addColumn {
+NAME: "CUST_NUMBER",
+TYPE: "id_String",
+NULLABLE: false,
+EXPRESSION: "tFilterRow_1.CUST_NUMBER "
+         }
+    }
+ }
+    }
+ addComponent {
+setComponentDefinition {
+TYPE: "tUniqRow",
+NAME: "tUniqRow_1",
+POSITION: 1202, 220 ,
+SIZE: 32, 32,
+OFFSETLABEL: 0, 0
+}
+setSettings {
+UNIQUE_KEY {
+SCHEMA_COLUMN : "CREDIT_CARD",
+KEY_ATTRIBUTE : "True",
+CASE_SENSITIVE : "True"
+
+},
+ONLY_ONCE_EACH_DUPLICATED_KEY : "false",
+CONNECTION_FORMAT : "row"
+}
+addSchema {
+NAME: "tUniqRow_1",
+CONNECTOR: "FLOW"
+addColumn { 
+NAME: "ACTOR_ID",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_ID",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "ACTOR_NAME",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 255,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_NAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "DOB",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "DOB",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "FIRSTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "FIRSTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "LASTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "LASTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "MOVIE_NUMBER",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "MOVIE_NUMBER",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CREDIT_CARD",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CREDIT_CARD_EXP",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD_EXP",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CUST_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+         } 
+
+
+}
+addSchema {
+NAME: "UNIQUE",
+CONNECTOR: "UNIQUE"
+addColumn { 
+NAME: "ACTOR_ID",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_ID",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "ACTOR_NAME",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 255,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_NAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "DOB",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "DOB",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "FIRSTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "FIRSTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "LASTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "LASTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "MOVIE_NUMBER",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "MOVIE_NUMBER",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CREDIT_CARD",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CREDIT_CARD_EXP",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD_EXP",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CUST_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+         } 
+
+
+}
+addSchema {
+NAME: "DUPLICATE",
+CONNECTOR: "DUPLICATE"
+addColumn { 
+NAME: "ACTOR_ID",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_ID",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "ACTOR_NAME",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 255,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_NAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "DOB",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "DOB",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "FIRSTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "FIRSTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "LASTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "LASTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "MOVIE_NUMBER",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "MOVIE_NUMBER",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CREDIT_CARD",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CREDIT_CARD_EXP",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD_EXP",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CUST_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+         } 
+
+
+}
+}
+addComponent {
+setComponentDefinition {
+TYPE: "tNormalize",
+NAME: "tNormalize_1",
+POSITION: 1452, 220 ,SIZE: 32, 32,
+OFFSETLABEL: 0, 0
+}
+setSettings {
+NORMALIZE_COLUMN : "CREDIT_CARD",
+ITEMSEPARATOR : "\":\"",
+
+CSV_OPTION : "false",
+ESCAPE_CHAR : "ESCAPE_MODE_DOUBLED",
+TEXT_ENCLOSURE : "\"\"\"",
+DISCARD_TRAILING_EMPTY_STR : "false",
+TRIM : "false",
+CONNECTION_FORMAT : "row"
+}
+addSchema {
+NAME: "tNormalize_1",
+CONNECTOR: "FLOW"
+addColumn { 
+NAME: "ACTOR_ID",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_ID",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "ACTOR_NAME",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 255,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_NAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "DOB",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "DOB",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "FIRSTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "FIRSTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "LASTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "LASTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "MOVIE_NUMBER",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "MOVIE_NUMBER",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CREDIT_CARD",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CREDIT_CARD_EXP",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD_EXP",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CUST_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+         } 
+
+
+}
+}
+addComponent {
+ setComponentDefinition {
+     TYPE: "tMap",
+     NAME: "tMap_2",
+     POSITION: 1752, 220 ,     SIZE: 32, 32,
+     OFFSETLABEL: 0, 0
+}
+ setSettings {
+     MAP : "",
+     LINK_STYLE : "AUTO",,
+     PREVIEW : "_qcyagHrCEeS565BvZTAhng-tMap_1-PREVIEW.bmp",
+     DIE_ON_ERROR : "true",
+     LKUP_PARALLELIZE : "false",
+     ROWS_BUFFER_SIZE : "2000000",
+     CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL : "false",
+     CONNECTION_FORMAT : "row",
+     INFORMATION : "false",,
+     VALIDATION_RULES : "false"
+  }
+ addSchema {
+ NAME: "tMap_2",
+  TYPE: "FLOW"
+addColumn { 
+NAME: "ACTOR_ID",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_ID",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "ACTOR_NAME",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 255,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_NAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "DOB",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "DOB",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "FIRSTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "FIRSTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "LASTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "LASTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "MOVIE_NUMBER",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "MOVIE_NUMBER",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CREDIT_CARD",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CREDIT_CARD_EXP",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD_EXP",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CUST_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+         } 
+
+addColumn { 
+NAME: "EMP_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMP_NUMBER",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+
+   }
+addMapperData {
+         addUiProperties {
+         SHELLMAXIMIZED: false
+   }
+addInputTable {
+         NAME: "tNormalize_1",
+         SIZESTATE: INTERMEDIATE,
+         MATCHINGMODE: "UNIQUE_MATCH",
+         LOOKUPMODE: "LOAD_ONCE"
+addColumn { 
+         NAME: "ACTOR_ID",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "ACTOR_NAME",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "DOB",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "FIRSTNAME",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "LASTNAME",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "MOVIE_NUMBER",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "CREDIT_CARD",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "CREDIT_CARD_EXP",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "CUST_NUMBER",
+         TYPE: "id_String"
+} 
+    }
+ addInputTable {
+         NAME: "row3",
+         SIZESTATE: INTERMEDIATE,
+         ACTIVATECONDENSEDTOOL: true,
+         MATCHINGMODE: "UNIQUE_MATCH",
+         LOOKUPMODE: "LOAD_ONCE"
+addColumn { 
+         NAME: "EMP_NUMBER",
+         TYPE: "id_String",
+NULLABLE: false 
+, 
+EXPRESSION: "tNormalize_1.ACTOR_ID ",
+OPERATOR: "=" 
+         }
+    }
+     addVarTable {
+           NAME: "Var",
+           MINIMIZED: true,
+           SIZESTATE: INTERMEDIATE
+     }
+    addOutputTable {
+         ID: "",
+ NAME: "tMap_2",
+         SIZESTATE: INTERMEDIATE
+         addColumn {
+NAME: "ACTOR_ID",
+TYPE: "id_String",
+NULLABLE: true,
+EXPRESSION: "tNormalize_1.ACTOR_ID "
+         }
+         addColumn {
+NAME: "ACTOR_NAME",
+TYPE: "id_String",
+NULLABLE: false,
+EXPRESSION: "tNormalize_1.ACTOR_NAME "
+         }
+         addColumn {
+NAME: "DOB",
+TYPE: "id_String",
+NULLABLE: true,
+EXPRESSION: "tNormalize_1.DOB "
+         }
+         addColumn {
+NAME: "FIRSTNAME",
+TYPE: "id_String",
+NULLABLE: true,
+EXPRESSION: "tNormalize_1.FIRSTNAME "
+         }
+         addColumn {
+NAME: "LASTNAME",
+TYPE: "id_String",
+NULLABLE: true,
+EXPRESSION: "tNormalize_1.LASTNAME "
+         }
+         addColumn {
+NAME: "MOVIE_NUMBER",
+TYPE: "id_String",
+NULLABLE: false,
+EXPRESSION: "tNormalize_1.MOVIE_NUMBER "
+         }
+         addColumn {
+NAME: "CREDIT_CARD",
+TYPE: "id_String",
+NULLABLE: true,
+EXPRESSION: "tNormalize_1.CREDIT_CARD "
+         }
+         addColumn {
+NAME: "CREDIT_CARD_EXP",
+TYPE: "id_String",
+NULLABLE: true,
+EXPRESSION: "tNormalize_1.CREDIT_CARD_EXP "
+         }
+         addColumn {
+NAME: "CUST_NUMBER",
+TYPE: "id_String",
+NULLABLE: false,
+EXPRESSION: "tNormalize_1.CUST_NUMBER "
+         }
+         addColumn {
+NAME: "EMP_NUMBER",
+TYPE: "id_String",
+NULLABLE: false,
+EXPRESSION: "row3.EMP_NUMBER "
+         }
+    }
+ }
+    }
+ addComponent {
+setComponentDefinition {
+TYPE: "tFilterRow",
+NAME: "tFilterRow_2",
+POSITION: 2752, 320 ,
+SIZE: 32, 32,
+OFFSETLABEL: 0, 0
+}
+setSettings {
+LOGICAL_OP : "&&",
+CONDITIONS {
+INPUT_COLUMN : "ACTOR_NAME",
+FUNCTION :"$source == null? false : $source.matches($target) $operator true",
+OPERATOR : "==",
+RVALUE : ""ABC""
+},
+
+USE_ADVANCED : "false",
+ADVANCED_COND :
+"// code sample : use input_row to define the condition.
+				//
+				input_row.columnName1.equals(\"foo\")||!(input_row.columnName2.equals(\"bar\"))
+				// replace the following expression by your own filter condition
+				input_row.columnName1.equals(input_row.columnName2)
+			",
+CONNECTION_FORMAT : "row"
+}
+addSchema {
+NAME: "tFilterRow_2",
+CONNECTOR: "FLOW"
+addColumn { 
+NAME: "ACTOR_ID",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_ID",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "ACTOR_NAME",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 255,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_NAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "DOB",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "DOB",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "FIRSTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "FIRSTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "LASTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "LASTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "MOVIE_NUMBER",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "MOVIE_NUMBER",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CREDIT_CARD",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CREDIT_CARD_EXP",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD_EXP",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CUST_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "EMP_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMP_NUMBER",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+
+
+}
+addSchema {
+NAME: "FILTER",
+CONNECTOR: "FILTER"
+addColumn { 
+NAME: "ACTOR_ID",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_ID",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "ACTOR_NAME",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 255,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_NAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "DOB",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "DOB",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "FIRSTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "FIRSTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "LASTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "LASTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "MOVIE_NUMBER",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "MOVIE_NUMBER",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CREDIT_CARD",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CREDIT_CARD_EXP",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD_EXP",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CUST_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "EMP_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMP_NUMBER",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+
+
+}
+addSchema {
+NAME: "REJECT",
+CONNECTOR: "REJECT"
+addColumn { 
+NAME: "ACTOR_ID",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_ID",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "ACTOR_NAME",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 255,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "ACTOR_NAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "DOB",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "DOB",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "FIRSTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "FIRSTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "LASTNAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 18,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "LASTNAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "MOVIE_NUMBER",
+TYPE: "id_String",  
+KEY: true,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "MOVIE_NUMBER",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CREDIT_CARD",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CREDIT_CARD_EXP",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "CREDIT_CARD_EXP",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CUST_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "EMP_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMP_NUMBER",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+
+
+addColumn {
+NAME: "errorMessage",
+TYPE: "id_String",
+NULLABLE: true,
+DEFAULTVALUE: "",
+LENGTH: 255,
+PRECISION: 0,
+SOURCETYPE: "",
+ORIGINALLEHGTH: -1
+}
+}
+}
+addComponent {
+ setComponentDefinition {
+     TYPE: "tMap",
+     NAME: "tMap_3",
+     POSITION: 3002,320 ,     SIZE: 32, 32,
+     OFFSETLABEL: 0, 0
+}
+ setSettings {
+     MAP : "",
+     LINK_STYLE : "AUTO",,
+     PREVIEW : "_qcyagHrCEeS565BvZTAhng-tMap_1-PREVIEW.bmp",
+     DIE_ON_ERROR : "true",
+     LKUP_PARALLELIZE : "false",
+     ROWS_BUFFER_SIZE : "2000000",
+     CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL : "false",
+     CONNECTION_FORMAT : "row",
+     INFORMATION : "false",,
+     VALIDATION_RULES : "false"
+  }
+ addSchema {
+ NAME: "dbo.emp_snowflake",
+  TYPE: "FLOW"
+addColumn { 
+NAME: "EMP_FIRST_NAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMP_FIRST_NAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "EMP_ADDRESS",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMP_ADDRESS",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "EMP_PHONE",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMP_PHONE",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "EMP_ADDRESS_2",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMP_ADDRESS_2",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "SOC_SEC_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "SOC_SEC_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "HIRE_DATE",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "HIRE_DATE",
+PATTERN: ""dd-MM-yyyy"",
+PRECISION: 0,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "SALARY",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "SALARY",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "EMAIL",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMAIL",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "EMP_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMP_NUMBER",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "STORE_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "STORE_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "SUPERVISOR",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "SUPERVISOR",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+   }
+addMapperData {
+         addUiProperties {
+         SHELLMAXIMIZED: false
+   }
+addInputTable {
+         NAME: "tFilterRow_2",
+         SIZESTATE: INTERMEDIATE,
+         MATCHINGMODE: "UNIQUE_MATCH",
+         LOOKUPMODE: "LOAD_ONCE"
+addColumn { 
+         NAME: "ACTOR_ID",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "ACTOR_NAME",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "DOB",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "FIRSTNAME",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "LASTNAME",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "MOVIE_NUMBER",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "CREDIT_CARD",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "CREDIT_CARD_EXP",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "CUST_NUMBER",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "EMP_NUMBER",
+         TYPE: "id_String"
+} 
+    }
+     addVarTable {
+           NAME: "Var",
+           MINIMIZED: true,
+           SIZESTATE: INTERMEDIATE
+     }
+    addOutputTable {
+         ID: "",
+         NAME: "dbo.cust_snowflake",
+         SIZESTATE: INTERMEDIATE
+} 
+    addOutputTable {
+         ID: "",
+         NAME: "dbo.emp_snowflake",
+         SIZESTATE: INTERMEDIATE
+         addColumn {
+NAME: "EMAIL",
+TYPE: "id_String",
+NULLABLE: true,
+EXPRESSION: "tFilterRow_2.CREDIT_CARD_EXP "
+         }
+} 
+     }
+    }
+ addComponent {
+ setComponentDefinition {
+     TYPE: "tMap",
+     NAME: "tMap_4",
+     POSITION: 3252,320 ,     SIZE: 32, 32,
+     OFFSETLABEL: 0, 0
+}
+ setSettings {
+     MAP : "",
+     LINK_STYLE : "AUTO",,
+     PREVIEW : "_qcyagHrCEeS565BvZTAhng-tMap_1-PREVIEW.bmp",
+     DIE_ON_ERROR : "true",
+     LKUP_PARALLELIZE : "false",
+     ROWS_BUFFER_SIZE : "2000000",
+     CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL : "false",
+     CONNECTION_FORMAT : "row",
+     INFORMATION : "false",,
+     VALIDATION_RULES : "false"
+  }
+ addSchema {
+ NAME: "dbo.cust_snowflake",
+  TYPE: "FLOW"
+addColumn { 
+NAME: "CUST_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CUST_ADDRESS",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_ADDRESS",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CUST_CITY",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_CITY",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CUST_FIRST_NAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_FIRST_NAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CUST_LAST_NAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_LAST_NAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CUST_STATE",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_STATE",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "CUST_ZIP_CODE",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_ZIP_CODE",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "EMAIL",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 16777216,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMAIL",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+   }
+addMapperData {
+         addUiProperties {
+         SHELLMAXIMIZED: false
+   }
+addInputTable {
+         NAME: "tFilterRow_2",
+         SIZESTATE: INTERMEDIATE,
+         MATCHINGMODE: "UNIQUE_MATCH",
+         LOOKUPMODE: "LOAD_ONCE"
+addColumn { 
+         NAME: "ACTOR_ID",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "ACTOR_NAME",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "DOB",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "FIRSTNAME",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "LASTNAME",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "MOVIE_NUMBER",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "CREDIT_CARD",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "CREDIT_CARD_EXP",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "CUST_NUMBER",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "EMP_NUMBER",
+         TYPE: "id_String"
+} 
+    }
+     addVarTable {
+           NAME: "Var",
+           MINIMIZED: true,
+           SIZESTATE: INTERMEDIATE
+     }
+    addOutputTable {
+         ID: "",
+         NAME: "dbo.cust_snowflake",
+         SIZESTATE: INTERMEDIATE
+         addColumn {
+NAME: "CUST_ADDRESS",
+TYPE: "id_String",
+NULLABLE: false,
+EXPRESSION: "tFilterRow_2.ACTOR_ID "
+         }
+         addColumn {
+NAME: "CUST_CITY",
+TYPE: "id_String",
+NULLABLE: true,
+EXPRESSION: "tFilterRow_2.ACTOR_NAME "
+         }
+         addColumn {
+NAME: "CUST_FIRST_NAME",
+TYPE: "id_String",
+NULLABLE: true,
+EXPRESSION: "tFilterRow_2.DOB "
+         }
+         addColumn {
+NAME: "CUST_LAST_NAME",
+TYPE: "id_String",
+NULLABLE: false,
+EXPRESSION: "tFilterRow_2.FIRSTNAME "
+         }
+         addColumn {
+NAME: "CUST_NUMBER",
+TYPE: "id_String",
+NULLABLE: false,
+EXPRESSION: "tFilterRow_2.LASTNAME "
+         }
+         addColumn {
+NAME: "CUST_STATE",
+TYPE: "id_String",
+NULLABLE: true,
+EXPRESSION: "tFilterRow_2.MOVIE_NUMBER "
+         }
+         addColumn {
+NAME: "CUST_ZIP_CODE",
+TYPE: "id_String",
+NULLABLE: true,
+EXPRESSION: "tFilterRow_2.CREDIT_CARD "
+         }
+} 
+    addOutputTable {
+         ID: "",
+         NAME: "dbo.emp_snowflake",
+         SIZESTATE: INTERMEDIATE
+} 
+     }
+    }
+ addComponent {
+setComponentDefinition {
+TYPE: "tSnowflakeOutput",
+NAME: "tSnowflakeOutput_1",
+POSITION: 3502, 220,
+SIZE: 32, 32,
+OFFSETLABEL: 0, 0
+}
+setSettings {
+END_OF_FLOW : "true",
+USE_EXISTING_CONNECTION : "true",,
+HOST : "\"localhost\"",  
+PORT : "\"443\"",  
+CONNECTION : "tSnowflakeConfiguration_1",  
+TABLE_ACTION : "NONE",  
+DB_SCHEMA : "\"movies\"",  
+DBNAME : "MOVIES",  
+TYPE : "",
+USER : "\"sa\"",  
+PASS : "\"goerwin@1\"",
+TABLE :  "\"MOVIES.DBO.CUST\"",  
+IDENTITY_INSERT : "false",
+NOTE :
+"NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns",
+LABEL : "cust_snowflake",  
+SPECIFY_IDENTITY_FIELD : "false",
+IDENTITY_FIELD : "CUST_NUMBER",
+START_VALUE : "1",
+STEP : "1",
+DIE_ON_ERROR : "false",
+MAPPING : "id_MSSQL",
+PROPERTIES : "\"\"",
+ENCODING : "\"ISO-8859-15\"",  
+ENCODING:ENCODING_TYPE : "ISO-8859-15",
+COMMIT_EVERY : "10000",,
+USE_FIELD_OPTIONS : "false",
+FIELD_OPTIONS {
+SCHEMA_COLUMN : "CUST_NUMBER",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true",
+SCHEMA_COLUMN : "CUST_ADDRESS",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true",
+SCHEMA_COLUMN : "CUST_CITY",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true",
+SCHEMA_COLUMN : "CUST_FIRST_NAME",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true",
+SCHEMA_COLUMN : "CUST_LAST_NAME",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true",
+SCHEMA_COLUMN : "CUST_STATE",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true",
+SCHEMA_COLUMN : "CUST_ZIP_CODE",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true",
+SCHEMA_COLUMN : "EMAIL",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true"
+},
+IGNORE_DATE_OUTOF_RANGE : "false",
+ENABLE_DEBUG_MODE : "false",
+SUPPORT_NULL_WHERE : "false",
+USE_BATCH_SIZE : "true",
+BATCH_SIZE : "10000",
+CONNECTION_FORMAT : "row",
+INFORMATION : "false",,
+VALIDATION_RULES : "false"
+}
+addSchema {
+NAME: "DBO.CUST",
+TYPE: "FLOW"
+addColumn {
+NAME: "CUST_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "CUST_ADDRESS",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_ADDRESS",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "CUST_CITY",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_CITY",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "CUST_FIRST_NAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_FIRST_NAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "CUST_LAST_NAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_LAST_NAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "CUST_STATE",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_STATE",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "CUST_ZIP_CODE",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_ZIP_CODE",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "EMAIL",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 16777216,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMAIL",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+}
+addSchema {
+NAME: "REJECT",
+TYPE: "REJECT"
+addColumn {
+NAME: "CUST_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "CUST_ADDRESS",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_ADDRESS",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "CUST_CITY",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_CITY",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "CUST_FIRST_NAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_FIRST_NAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "CUST_LAST_NAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_LAST_NAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "CUST_STATE",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_STATE",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "CUST_ZIP_CODE",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "CUST_ZIP_CODE",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "EMAIL",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 16777216,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMAIL",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "errorCode",
+TYPE: "id_String",
+NULLABLE: true,
+DEFAULTVALUE: "",
+LENGTH: 255,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "errorMessage",
+TYPE: "id_String",
+NULLABLE: true,
+DEFAULTVALUE: "",
+LENGTH: 255,
+SOURCETYPE: "VARCHAR"
+}
+}
+}
+addComponent {
+setComponentDefinition {
+TYPE: "tSnowflakeOutput",
+NAME: "tSnowflakeOutput_2",
+POSITION: 3502, 320,
+SIZE: 32, 32,
+OFFSETLABEL: 0, 0
+}
+setSettings {
+END_OF_FLOW : "true",
+USE_EXISTING_CONNECTION : "true",,
+HOST : "\"localhost\"",  
+PORT : "\"443\"",  
+CONNECTION : "tSnowflakeConfiguration_1",  
+TABLE_ACTION : "NONE",  
+DB_SCHEMA : "\"movies\"",  
+DBNAME : "MOVIES",  
+TYPE : "",
+USER : "\"sa\"",  
+PASS : "\"goerwin@1\"",
+TABLE :  "\"MOVIES.DBO.EMP\"",  
+IDENTITY_INSERT : "false",
+NOTE :
+"NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns",
+LABEL : "emp_snowflake",  
+SPECIFY_IDENTITY_FIELD : "false",
+IDENTITY_FIELD : "EMP_FIRST_NAME",
+START_VALUE : "1",
+STEP : "1",
+DIE_ON_ERROR : "false",
+MAPPING : "id_MSSQL",
+PROPERTIES : "\"\"",
+ENCODING : "\"ISO-8859-15\"",  
+ENCODING:ENCODING_TYPE : "ISO-8859-15",
+COMMIT_EVERY : "10000",,
+USE_FIELD_OPTIONS : "false",
+FIELD_OPTIONS {
+SCHEMA_COLUMN : "EMP_FIRST_NAME",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true",
+SCHEMA_COLUMN : "EMP_ADDRESS",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true",
+SCHEMA_COLUMN : "EMP_PHONE",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true",
+SCHEMA_COLUMN : "EMP_ADDRESS_2",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true",
+SCHEMA_COLUMN : "SOC_SEC_NUMBER",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true",
+SCHEMA_COLUMN : "HIRE_DATE",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true",
+SCHEMA_COLUMN : "SALARY",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true",
+SCHEMA_COLUMN : "EMAIL",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true",
+SCHEMA_COLUMN : "EMP_NUMBER",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true",
+SCHEMA_COLUMN : "STORE_NUMBER",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true",
+SCHEMA_COLUMN : "SUPERVISOR",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true"
+},
+IGNORE_DATE_OUTOF_RANGE : "false",
+ENABLE_DEBUG_MODE : "false",
+SUPPORT_NULL_WHERE : "false",
+USE_BATCH_SIZE : "true",
+BATCH_SIZE : "10000",
+CONNECTION_FORMAT : "row",
+INFORMATION : "false",,
+VALIDATION_RULES : "false"
+}
+addSchema {
+NAME: "DBO.EMP",
+TYPE: "FLOW"
+addColumn {
+NAME: "EMP_FIRST_NAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMP_FIRST_NAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "EMP_ADDRESS",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMP_ADDRESS",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "EMP_PHONE",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMP_PHONE",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "EMP_ADDRESS_2",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMP_ADDRESS_2",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "SOC_SEC_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "SOC_SEC_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "HIRE_DATE",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "HIRE_DATE",
+PATTERN: ""dd-MM-yyyy"",
+PRECISION: 0,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "SALARY",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "SALARY",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "EMAIL",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMAIL",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "EMP_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMP_NUMBER",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "STORE_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "STORE_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "SUPERVISOR",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "SUPERVISOR",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+}
+addSchema {
+NAME: "REJECT",
+TYPE: "REJECT"
+addColumn {
+NAME: "EMP_FIRST_NAME",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMP_FIRST_NAME",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "EMP_ADDRESS",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMP_ADDRESS",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "EMP_PHONE",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMP_PHONE",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "EMP_ADDRESS_2",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMP_ADDRESS_2",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "SOC_SEC_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "SOC_SEC_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "HIRE_DATE",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "HIRE_DATE",
+PATTERN: ""dd-MM-yyyy"",
+PRECISION: 0,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "SALARY",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "SALARY",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "EMAIL",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: true,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMAIL",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "EMP_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "EMP_NUMBER",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "STORE_NUMBER",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 50,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "STORE_NUMBER",
+PATTERN: "",
+PRECISION: 38,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "SUPERVISOR",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 20,
+COMMENT: " ",
+ORIGINALDBCOLUMNNAME "SUPERVISOR",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "errorCode",
+TYPE: "id_String",
+NULLABLE: true,
+DEFAULTVALUE: "",
+LENGTH: 255,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "errorMessage",
+TYPE: "id_String",
+NULLABLE: true,
+DEFAULTVALUE: "",
+LENGTH: 255,
+SOURCETYPE: "VARCHAR"
+}
+}
+}
+addConnection {
+ TYPE: "FLOW",
+ NAME: "row1",
+LINESTYLE: 0,
+ METANAME: "ADS_MM_VERSION",
+ SOURCE: "tSnowflakeInput_1",
+ TARGET: "tSortRow_1",
+ OFFSETLABEL: 0, 0,
+ UNIQUE_NAME : "row1",
+ TRACES_CONNECTION_FILTER {
+     TRACE_COLUMN : "ACTOR_ID",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : "",
+
+     TRACE_COLUMN : "ACTOR_NAME",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : "",
+
+     TRACE_COLUMN : "DOB",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : "",
+
+     TRACE_COLUMN : "FIRSTNAME",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : "",
+
+     TRACE_COLUMN : "LASTNAME",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : "",
+
+     TRACE_COLUMN : "MOVIE_NUMBER",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : "",
+
+     TRACE_COLUMN : "CREDIT_CARD",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : "",
+
+     TRACE_COLUMN : "CREDIT_CARD_EXP",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : ""
+
+}, MONITOR_CONNECTION : "false",
+ USEROWLABEL : "true",
+ METTERLABEL : "\"MyLabel\"",
+ ABSOLUTE : "Absolute",,,
+ PARTITIONER : "false",
+ DEPARTITIONER : "false",
+ REPARTITIONER : "false",
+ NONE : "true",
+ NUM_PARTITIONS : "5",
+ PART_QUEUE_SIZE : "1000",
+ HASH_PARTITION : "false",,
+ DEPART_QUEUE_SIZE : "1000",
+ IS_SORTING : "true",
+ ACTIVATE : "true",
+ TRACES_CONNECTION_ENABLE : "true",
+ RESUMING_CHECKPOINT : "false",,,
+ ACTIVEBREAKPOINT : "false",
+ LOGICAL_OP : "&&",,
+ USE_ADVANCED : "false",
+ ADVANCED_COND : "// code sample : use input_row to define the condition.
+// input_row.columnName1.equals(\"foo\") ||!(input_row.columnName2.equals(\"bar\"))
+// replace the following expression by your own filter condition 
+input_row.columnName1.equals(input_row.columnName2)
+      "
+}
+addConnection { 
+TYPE: "FLOW",
+NAME: "row2",
+LINESTYLE: 0,
+METANAME: "dbo.cust_credit_snowflake",
+SOURCE: "tSnowflakeInput_2",
+TARGET: "tFilterRow_1",
+OFFSETLABEL: 0, 0,,
+MONITOR_CONNECTION : "false"
+}
+addConnection { 
+TYPE: "FLOW",
+NAME: "row3",
+LINESTYLE: 8,
+METANAME: "dbo.emp_snowflake",
+SOURCE: "tSnowflakeInput_3",
+TARGET: "tMap_2",
+OFFSETLABEL: 0, 0,,
+MONITOR_CONNECTION : "false"
+}
+addConnection {
+ TYPE: "FLOW",
+ NAME: "dbo.cust_snowflake",
+ METANAME: "dbo.cust_snowflake",
+ SOURCE: "tMap_4",
+ TARGET: "tSnowflakeOutput_1",
+ OFFSETLABEL: 0, 0,
+ UNIQUE_NAME : "dbo.cust_snowflake",
+ TRACES_CONNECTION_FILTER {
+     TRACE_COLUMN : "CUST_ADDRESS",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : "",
+     TRACE_COLUMN : "CUST_CITY",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : "",
+     TRACE_COLUMN : "CUST_FIRST_NAME",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : "",
+     TRACE_COLUMN : "CUST_LAST_NAME",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : "",
+     TRACE_COLUMN : "CUST_NUMBER",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : "",
+     TRACE_COLUMN : "CUST_STATE",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : "",
+     TRACE_COLUMN : "CUST_ZIP_CODE",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : "",
+     TRACE_COLUMN : "EMAIL",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : ""
+}, MONITOR_CONNECTION : "false",
+ USEROWLABEL : "true",
+ METTERLABEL : "\"MyLabel\"",
+ ABSOLUTE : "Absolute",
+ PARTITIONER : "false",
+ DEPARTITIONER : "false",
+ REPARTITIONER : "false",
+ NONE : "true",
+ NUM_PARTITIONS : "5",
+ PART_QUEUE_SIZE : "1000",
+ HASH_PARTITION : "false",
+ DEPART_QUEUE_SIZE : "1000",
+ IS_SORTING : "true",
+ ACTIVATE : "true",
+ TRACES_CONNECTION_ENABLE : "true",
+ RESUMING_CHECKPOINT : "false",
+ ACTIVEBREAKPOINT : "false",
+ LOGICAL_OP : "&&",
+ USE_ADVANCED : "false",
+ ADVANCED_COND : "// code sample : use input_row to define the condition.
+// input_row.columnName1.equals(\"foo\") ||!(input_row.columnName2.equals(\"bar\"))
+// replace the following expression by your own filter condition 
+input_row.columnName1.equals(input_row.columnName2)
+      "
+}
+addConnection {
+ TYPE: "FLOW",
+ NAME: "dbo.emp_snowflake",
+ METANAME: "dbo.emp_snowflake",
+ SOURCE: "tMap_3",
+ TARGET: "tSnowflakeOutput_2",
+ OFFSETLABEL: 0, 0,
+ UNIQUE_NAME : "dbo.emp_snowflake",
+ TRACES_CONNECTION_FILTER {
+     TRACE_COLUMN : "CUST_ADDRESS",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : "",
+     TRACE_COLUMN : "CUST_CITY",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : "",
+     TRACE_COLUMN : "CUST_FIRST_NAME",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : "",
+     TRACE_COLUMN : "CUST_LAST_NAME",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : "",
+     TRACE_COLUMN : "CUST_NUMBER",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : "",
+     TRACE_COLUMN : "CUST_STATE",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : "",
+     TRACE_COLUMN : "CUST_ZIP_CODE",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : "",
+     TRACE_COLUMN : "EMAIL",
+     TRACE_COLUMN_CHECKED : "true",
+     TRACE_COLUMN_CONDITION : ""
+}, MONITOR_CONNECTION : "false",
+ USEROWLABEL : "true",
+ METTERLABEL : "\"MyLabel\"",
+ ABSOLUTE : "Absolute",
+ PARTITIONER : "false",
+ DEPARTITIONER : "false",
+ REPARTITIONER : "false",
+ NONE : "true",
+ NUM_PARTITIONS : "5",
+ PART_QUEUE_SIZE : "1000",
+ HASH_PARTITION : "false",
+ DEPART_QUEUE_SIZE : "1000",
+ IS_SORTING : "true",
+ ACTIVATE : "true",
+ TRACES_CONNECTION_ENABLE : "true",
+ RESUMING_CHECKPOINT : "false",
+ ACTIVEBREAKPOINT : "false",
+ LOGICAL_OP : "&&",
+ USE_ADVANCED : "false",
+ ADVANCED_COND : "// code sample : use input_row to define the condition.
+// input_row.columnName1.equals(\"foo\") ||!(input_row.columnName2.equals(\"bar\"))
+// replace the following expression by your own filter condition 
+input_row.columnName1.equals(input_row.columnName2)
+      "
+}
+addConnection {
+TYPE: "FLOW",
+NAME: "tSortRow_1",
+LINESTYLE: 0,
+METANAME: "tSortRow_1",
+SOURCE: "tSortRow_1",
+TARGET: "tMap_1",
+OFFSETLABEL: 0, 0,,
+MONITOR_CONNECTION : "false"
+}
+addConnection {
+TYPE: "FILTER",
+NAME: "tFilterRow_1",
+LINESTYLE: 8,
+METANAME: "FILTER",
+SOURCE: "tFilterRow_1",
+TARGET: "tMap_1",
+OFFSETLABEL: 0, 0,,
+MONITOR_CONNECTION : "false"
+}
+addConnection {
+TYPE: "FLOW",
+NAME: "tMap_1",
+LINESTYLE: 0,METANAME: "tMap_1",
+SOURCE: "tMap_1",
+TARGET: "tUniqRow_1",
+OFFSETLABEL: 0, 0,,
+MONITOR_CONNECTION : "false"
+}
+addConnection {
+TYPE: "UNIQUE",
+NAME: "tUniqRow_1",
+LINESTYLE: 0,
+METANAME: "UNIQUE",
+SOURCE: "tUniqRow_1",
+TARGET: "tNormalize_1",
+OFFSETLABEL: 0, 0,,
+MONITOR_CONNECTION : "false"
+}
+addConnection {
+TYPE: "FLOW",
+NAME: "tNormalize_1",
+LINESTYLE: 0,
+METANAME: "tNormalize_1",
+SOURCE: "tNormalize_1",
+TARGET: "tMap_2",
+OFFSETLABEL: 0, 0,,
+MONITOR_CONNECTION : "false"
+}
+addConnection {
+TYPE: "FLOW",
+NAME: "tMap_2",
+LINESTYLE: 0,METANAME: "tMap_2",
+SOURCE: "tMap_2",
+TARGET: "tFilterRow_2",
+OFFSETLABEL: 0, 0,,
+MONITOR_CONNECTION : "false"
+}
+addConnection {
+TYPE: "FILTER",
+NAME: "tFilterRow_2",
+LINESTYLE: 0,
+METANAME: "FILTER",
+SOURCE: "tFilterRow_2",
+TARGET: "tMap_3",
+OFFSETLABEL: 0, 0,,
+MONITOR_CONNECTION : "false"
+}
+addConnection {
+TYPE: "REJECT",
+NAME: "tFilterRow_2",
+LINESTYLE: 0,
+METANAME: "REJECT",
+SOURCE: "tFilterRow_2",
+TARGET: "tMap_4",
+OFFSETLABEL: 0, 0,,
+MONITOR_CONNECTION : "false"
+}
+addNote {
+OPAQUE: true,
+TEXT:"",
+POSITION: 1024, 32,
+SIZE: (96,64)
+}
