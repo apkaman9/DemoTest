@@ -1,0 +1,646 @@
+SCRIPT_VERSION=4.2,
+JobType= Standard,
+DEFAULT_CONTEXT: Default,
+ContextType {
+	NAME: Default
+	addContextParameter {
+		NAME: errmsg,
+		TYPE: "id_String",
+		VALUE: "\"\"",
+		COMMENT: "",
+		PROMPT: "errmsg?"
+	}
+}
+addParameters {
+	addElementParameters {
+		SCREEN_OFFSET_X : "0",
+		SCREEN_OFFSET_Y : "0",,,,,,,,,,,,,,,,
+		IMPLICITCONTEXT_USE_PROJECT_SETTINGS : "true",
+		STATANDLOG_USE_PROJECT_SETTINGS : "true",
+		MULTI_THREAD_EXECATION : "false",
+		PARALLELIZE_UNIT_SIZE : "25000",
+		IMPLICIT_TCONTEXTLOAD : "false",
+		FROM_FILE_FLAG_IMPLICIT_CONTEXT : "false",
+		FROM_DATABASE_FLAG_IMPLICIT_CONTEXT : "false",
+		IMPLICIT_TCONTEXTLOAD_FILE : "\"\"",
+		FIELDSEPARATOR : "\"\"",,,
+		URL_IMPLICIT_CONTEXT : "\"\"",,
+		DRIVER_CLASS_IMPLICIT_CONTEXT : "\"\"",
+		HOST_IMPLICIT_CONTEXT : "\"\"",
+		PORT_IMPLICIT_CONTEXT : "\"\"",
+		DBNAME_IMPLICIT_CONTEXT : "\"\"",
+		LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT : "\"\"",
+		PROPERTIES_IMPLICIT_CONTEXT : "\"\"",
+		SCHEMA_DB_IMPLICIT_CONTEXT : "\"\"",
+		USER_IMPLICIT_CONTEXT : "\"\"",
+		PASS_IMPLICIT_CONTEXT : "0RMsyjmybrE=",
+		DBFILE_IMPLICIT_CONTEXT : "\"\"",
+		DBTABLE_IMPLICIT_CONTEXT : "\"\"",
+		QUERY_CONDITION_IMPLICIT_CONTEXT : "\"\"",
+		LOAD_NEW_VARIABLE : "Warning",
+		NOT_LOAD_OLD_VARIABLE : "Warning",
+		PRINT_OPERATIONS : "false",
+		DISABLE_ERROR : "false",
+		DISABLE_WARNINGS : "false",
+		DISABLE_INFO : "false",
+		ON_STATCATCHER_FLAG : "false",
+		ON_LOGCATCHER_FLAG : "false",
+		ON_METERCATCHER_FLAG : "false",
+		ON_CONSOLE_FLAG : "false",
+		ON_FILES_FLAG : "false",
+		FILE_PATH :
+		"\"D:/Talend/Talend-Studio-20190620_1446-V7.2.1/workspace/.metadata\"",
+		FILENAME_STATS : "\"stats_file.txt\"",
+		FILENAME_LOGS : "\"logs_file.txt\"",
+		FILENAME_METTER : "\"meter_file.txt\"",
+		ENCODING : "ISO-8859-15",
+		ENCODING:ENCODING_TYPE : "ISO-8859-15",
+		ON_DATABASE_FLAG : "false",
+		DB_TYPE : "tJDBCOutput",
+		DB_VERSION : "ORACLE_12",
+		URL : "\"\"",,
+		DRIVER_CLASS : "\"\"",
+		HOST : "\"\"",
+		PORT : "\"\"",
+		DATASOURCE : "\"\"",
+		DBNAME : "\"\"",
+		LOCAL_SERVICE_NAME : "\"\"",
+		PROPERTIES : "\"\"",
+		SCHEMA_DB : "\"\"",
+		USER : "\"\"",
+		PASS : "0RMsyjmybrE=",
+		DBFILE : "\"\"",
+		TABLE_STATS : "\"\"",
+		TABLE_LOGS : "\"\"",
+		TABLE_METER : "\"\"",
+		CATCH_RUNTIME_ERRORS : "true",
+		CATCH_USER_ERRORS : "true",
+		CATCH_USER_WARNING : "true",
+		CATCH_REALTIME_STATS : "false",,
+		HEADER_ENABLED : "false",,,,,
+		FOOTER_ENABLED : "false",,,
+	}
+	addRoutinesParameters {
+		addRoutinesParameter {
+			NAME: "DQTechnical"
+		}
+		addRoutinesParameter {
+			NAME: "DataMasking"
+		}
+		addRoutinesParameter {
+			NAME: "DataOperation"
+		}
+		addRoutinesParameter {
+			NAME: "DataQualityDependencies"
+		}
+		addRoutinesParameter {
+			NAME: "DataQuality"
+		}
+		addRoutinesParameter {
+			NAME: "DqStringHandling"
+		}
+		addRoutinesParameter {
+			NAME: "Mathematical"
+		}
+		addRoutinesParameter {
+			NAME: "Numeric"
+		}
+		addRoutinesParameter {
+			NAME: "Relational"
+		}
+		addRoutinesParameter {
+			NAME: "SQLike"
+		}
+		addRoutinesParameter {
+			NAME: "StringHandling"
+		}
+		addRoutinesParameter {
+			NAME: "TalendDataGenerator"
+		}
+		addRoutinesParameter {
+			NAME: "TalendDate"
+		}
+		addRoutinesParameter {
+			NAME: "TalendStringUtil"
+		}
+		addRoutinesParameter {
+			NAME: "TalendString"
+		}
+	}
+}
+addComponent {
+	setComponentDefinition {
+		TYPE: "tRunJob",
+		NAME: "tRunJob_1",
+		POSITION: 512, 192,
+		SIZE: 32, 32,
+		OFFSETLABEL: 0, 0
+	}
+	setSettings {
+		USE_DYNAMIC_JOB : "false",,
+		PROCESS : "emailnotification_childjob",
+		PROCESS:PROCESS_TYPE_CONTEXT : "Default",
+		PROCESS:PROCESS_TYPE_PROCESS : "",
+		PROCESS:PROCESS_TYPE_VERSION : "Latest",
+		CONTEXT_NAME : "Default",
+		USE_INDEPENDENT_PROCESS : "true",
+		DIE_ON_CHILD_ERROR : "true",
+		TRANSMIT_WHOLE_CONTEXT : "false",,
+		PROPAGATE_CHILD_RESULT : "false",
+		PRINT_PARAMETER : "false",
+		TRANSMIT_ORIGINAL_CONTEXT : "true",
+		LABEL : "__PROCESS__",
+		CONNECTION_FORMAT : "row"
+	}
+	addSchema {
+		NAME: "tRunJob_1",
+		CONNECTOR: "FLOW"
+	}
+}
+addComponent {
+	setComponentDefinition {
+		TYPE: "tLogCatcher",
+		NAME: "tLogCatcher_1",
+		POSITION: 832, 128,
+		SIZE: 32, 32,
+		OFFSETLABEL: 0, 0
+	}
+	setSettings {
+		CATCH_JAVA_EXCEPTION : "true",
+		CATCH_TDIE : "true",
+		CATCH_TWARN : "true",
+		CATCH_TACTIONFAILURE : "true",
+		CONNECTION_FORMAT : "row"
+	}
+	addSchema {
+		NAME: "tLogCatcher_1",
+		CONNECTOR: "FLOW"
+		addColumn {
+			NAME: "moment",
+			TYPE: "id_Date",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 0,
+			PATTERN: "\"yyyy-MM-dd HH:mm:ss\"",
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+		addColumn {
+			NAME: "pid",
+			TYPE: "id_String",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 20,
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+		addColumn {
+			NAME: "root_pid",
+			TYPE: "id_String",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 20,
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+		addColumn {
+			NAME: "father_pid",
+			TYPE: "id_String",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 20,
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+		addColumn {
+			NAME: "project",
+			TYPE: "id_String",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 50,
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+		addColumn {
+			NAME: "job",
+			TYPE: "id_String",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 255,
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+		addColumn {
+			NAME: "context",
+			TYPE: "id_String",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 50,
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+		addColumn {
+			NAME: "priority",
+			TYPE: "id_Integer",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 3,
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+		addColumn {
+			NAME: "type",
+			TYPE: "id_String",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 255,
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+		addColumn {
+			NAME: "origin",
+			TYPE: "id_String",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 255,
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+		addColumn {
+			NAME: "message",
+			TYPE: "id_String",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 255,
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+		addColumn {
+			NAME: "code",
+			TYPE: "id_Integer",
+			NULLABLE: true,
+			DEFAULTVALUE: "",
+			LENGTH: 3,
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+	}
+}
+addComponent {
+	setComponentDefinition {
+		TYPE: "tMap",
+		NAME: "tMap_1",
+		POSITION: 1088, 128,
+		SIZE: 32, 32,
+		OFFSETLABEL: 0, 0
+	}
+	setSettings {,
+		LINK_STYLE : "AUTO",,
+		PREVIEW : "_BIo9oOz2EeqCHvvm2j1jXQ-tMap_1-PREVIEW.bmp",
+		DIE_ON_ERROR : "true",
+		LKUP_PARALLELIZE : "false",
+		LEVENSHTEIN : "0",
+		JACCARD : "0",
+		ENABLE_AUTO_CONVERT_TYPE : "false",
+		ROWS_BUFFER_SIZE : "2000000",
+		CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL : "true",
+		CONNECTION_FORMAT : "row"
+	}
+	addSchema {
+		NAME: "out1",
+		CONNECTOR: "FLOW"
+		addColumn {
+			NAME: "message",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 255,
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+	}
+	addMapperData {
+		addUiProperties {
+			SHELLMAXIMIZED: false
+		}
+		addInputTable {
+			NAME: "row1",
+			SIZESTATE: INTERMEDIATE,
+			MATCHINGMODE: "UNIQUE_MATCH",
+			LOOKUPMODE: "LOAD_ONCE"
+			addColumn {
+				NAME: "moment",
+				TYPE: "id_Date",
+				NULLABLE: true
+			}
+			addColumn {
+				NAME: "pid",
+				TYPE: "id_String",
+				NULLABLE: true
+			}
+			addColumn {
+				NAME: "root_pid",
+				TYPE: "id_String",
+				NULLABLE: true
+			}
+			addColumn {
+				NAME: "father_pid",
+				TYPE: "id_String",
+				NULLABLE: true
+			}
+			addColumn {
+				NAME: "project",
+				TYPE: "id_String",
+				NULLABLE: true
+			}
+			addColumn {
+				NAME: "job",
+				TYPE: "id_String",
+				NULLABLE: true
+			}
+			addColumn {
+				NAME: "context",
+				TYPE: "id_String",
+				NULLABLE: true
+			}
+			addColumn {
+				NAME: "priority",
+				TYPE: "id_Integer",
+				NULLABLE: true
+			}
+			addColumn {
+				NAME: "type",
+				TYPE: "id_String",
+				NULLABLE: true
+			}
+			addColumn {
+				NAME: "origin",
+				TYPE: "id_String",
+				NULLABLE: true
+			}
+			addColumn {
+				NAME: "message",
+				TYPE: "id_String",
+				NULLABLE: true
+			}
+			addColumn {
+				NAME: "code",
+				TYPE: "id_Integer",
+				NULLABLE: true
+			}
+		}
+		addVarTable {
+			NAME: "Var",
+			MINIMIZED: true,
+			SIZESTATE: INTERMEDIATE
+		}
+		addOutputTable {
+			ID: "",
+			NAME: "out1",
+			SIZESTATE: INTERMEDIATE
+			addColumn {
+				NAME: "message",
+				TYPE: "id_String",
+				NULLABLE: true,
+				EXPRESSION: "context.errmsg=row1.message "
+			}
+		}
+	}
+}
+addComponent {
+	setComponentDefinition {
+		TYPE: "tHashOutput",
+		NAME: "tHashOutput_1",
+		POSITION: 1312, 128,
+		SIZE: 32, 32,
+		OFFSETLABEL: 0, 0
+	}
+	setSettings {
+		LINK_WITH : "false",,
+		DATA_WRITE_MODEL : "MEMORY",
+		BASE_FILE_PATH :
+		"",
+		MEMORY_HEAP_MAX_SIZE : "2",
+		KEYS_MANAGEMENT : "KEEP_ALL",
+		APPEND : "true",
+		HASH_KEY_FROM_INPUT_CONNECTOR : "false",
+		CONNECTION_FORMAT : "row"
+	}
+	addSchema {
+		NAME: "tHashOutput_1",
+		CONNECTOR: "FLOW"
+		addColumn {
+			NAME: "message",
+			TYPE: "id_String",
+			NULLABLE: true,
+			LENGTH: 255,
+			PRECISION: 0,
+			SOURCETYPE: "",
+			ORIGINALLEHGTH: -1
+		}
+	}
+}
+addComponent {
+	setComponentDefinition {
+		TYPE: "tPostjob",
+		NAME: "tPostjob_1",
+		POSITION: 352, 352,
+		SIZE: 32, 32,
+		OFFSETLABEL: 0, 0
+	}
+	setSettings {
+		CONNECTION_FORMAT : "row"
+	}
+}
+addComponent {
+	setComponentDefinition {
+		TYPE: "tJava",
+		NAME: "tJava_1",
+		POSITION: 576, 352,
+		SIZE: 32, 32,
+		OFFSETLABEL: 0, 0
+	}
+	setSettings {
+		CODE : "String foo = \"bar\";",
+		IMPORT : "//import java.util.List;",
+		CONNECTION_FORMAT : "row"
+	}
+	addSchema {
+		NAME: "tJava_1",
+		CONNECTOR: "FLOW"
+	}
+}
+addComponent {
+	setComponentDefinition {
+		TYPE: "tSendMail",
+		NAME: "tSendMail_1",
+		POSITION: 448, 512,
+		SIZE: 32, 32,
+		OFFSETLABEL: 0, 0
+	}
+	setSettings {
+		TO : "\"xyz@yahoo.com\"",
+		FROM : "\"abc@gmail.com\"",
+		NEED_PERSONAL_NAME : "false",
+		PERSONAL_NAME : "\"sender\"",
+		CC : "\"\"",
+		BCC : "\"\"",
+		SUBJECT : "\"Job\"+\" \"+ jobName +\" \"+\"Status\"",
+		MESSAGE :
+		"\"JobName:\"+\" \"+ jobName +\"\\n\"+ \"Status:\" +\" \"+ \"SUCCESS\"",
+		CHECK_ATTACHMENT : "true",,,
+		SMTP_HOST : "\"smtp.googlemail.com\"",
+		SMTP_PORT : "465",
+		SSL : "true",
+		STARTTLS : "false",
+		IMPORTANCE : "Normal",
+		NEED_AUTH : "true",
+		AUTH_USERNAME : "\"test@test.com\"",
+		AUTH_PASSWORD : "0dAweZkbp5y8EYUG5+IqJQ==",
+		DIE_ON_ERROR : "true",
+		TEXT_SUBTYPE : "plain",
+		ENCODING : "\"ISO-8859-15\"",
+		ENCODING:ENCODING_TYPE : "ISO-8859-15",
+		SET_LOCALHOST : "false",
+		LOCALHOST : "\"localhost\"",
+		CONNECTION_FORMAT : "row"
+	}
+	addSchema {
+		NAME: "tSendMail_1",
+		CONNECTOR: "FLOW"
+	}
+}
+addComponent {
+	setComponentDefinition {
+		TYPE: "tSendMail",
+		NAME: "tSendMail_2",
+		POSITION: 704, 512,
+		SIZE: 32, 32,
+		OFFSETLABEL: 0, 0
+	}
+	setSettings {
+		TO : "\"xyz@yahoo.com\"",
+		FROM : "\"abc@gmail.com\"",
+		NEED_PERSONAL_NAME : "false",
+		PERSONAL_NAME : "\"sender\"",
+		CC : "\"\"",
+		BCC : "\"\"",
+		SUBJECT : "\"Job\"+\" \"+ jobName +\" \"+\"Status\"",
+		MESSAGE :
+		"\"JobName:\"+\" \"+ jobName +\"\\n\"+ \"Status:\" +\" \"+ context.errmsg",
+		CHECK_ATTACHMENT : "true",,,
+		SMTP_HOST : "\"smtp.googlemail.com\"",
+		SMTP_PORT : "465",
+		SSL : "true",
+		STARTTLS : "false",
+		IMPORTANCE : "Normal",
+		NEED_AUTH : "true",
+		AUTH_USERNAME : "\"test@test.com\"",
+		AUTH_PASSWORD : "0dAweZkbp5y8EYUG5+IqJQ==",
+		DIE_ON_ERROR : "true",
+		TEXT_SUBTYPE : "plain",
+		ENCODING : "\"ISO-8859-15\"",
+		ENCODING:ENCODING_TYPE : "ISO-8859-15",
+		SET_LOCALHOST : "false",
+		LOCALHOST : "\"localhost\"",
+		CONNECTION_FORMAT : "row"
+	}
+	addSchema {
+		NAME: "tSendMail_2",
+		CONNECTOR: "FLOW"
+	}
+}
+addConnection {
+	TYPE: "FLOW",
+	NAME: "row1",
+	LINESTYLE: 0,
+	METANAME: "tLogCatcher_1",
+	SOURCE: "tLogCatcher_1",
+	TARGET: "tMap_1",
+	OFFSETLABEL: 0, 0,,
+	MONITOR_CONNECTION : "false"
+}
+addConnection {
+	TYPE: "FLOW",
+	NAME: "out1",
+	LINESTYLE: 0,
+	METANAME: "out1",
+	SOURCE: "tMap_1",
+	TARGET: "tHashOutput_1",
+	OFFSETLABEL: 0, 0,,
+	MONITOR_CONNECTION : "false"
+}
+addConnection {
+	TYPE: "COMPONENT_OK",
+	NAME: "OnComponentOk",
+	LINESTYLE: 3,
+	METANAME: "tPostjob_1",
+	SOURCE: "tPostjob_1",
+	TARGET: "tJava_1",
+	OFFSETLABEL: 0, 0,
+}
+addConnection {
+	TYPE: "RUN_IF",
+	NAME: "If",
+	LINESTYLE: 6,
+	METANAME: "tJava_1",
+	OUTPUTID: 1,
+	SOURCE: "tJava_1",
+	TARGET: "tSendMail_1",
+	OFFSETLABEL: 0, 0,,
+	CONDITION : "context.errmsg.equals(\"\")"
+}
+addConnection {
+	TYPE: "RUN_IF",
+	NAME: "If",
+	LINESTYLE: 6,
+	METANAME: "tJava_1",
+	OUTPUTID: 2,
+	SOURCE: "tJava_1",
+	TARGET: "tSendMail_2",
+	OFFSETLABEL: 0, 0,,
+	CONDITION : "!context.errmsg.equals(\"\")"
+}
+addSubjob {
+	NAME: "tRunJob_1"
+	SUBJOB_TITLE_COLOR : "92;131;150",
+	SUBJOB_COLOR : "207;226;236"
+}
+addSubjob {
+	NAME: "tLogCatcher_1"
+	SUBJOB_TITLE_COLOR : "92;131;150",
+	SUBJOB_COLOR : "207;226;236"
+}
+addSubjob {
+	NAME: "tPostjob_1"
+	SHOW_SUBJOB_TITLE : "true",
+	SUBJOB_TITLE_COLOR : "230;100;0",
+	SUBJOB_COLOR : "255;220;180"
+}
+addSubjob {
+	NAME: "tJava_1"
+	SUBJOB_TITLE_COLOR : "92;131;150",
+	SUBJOB_COLOR : "207;226;236"
+}
+addSubjob {
+	NAME: "tSendMail_1"
+	SUBJOB_TITLE_COLOR : "92;131;150",
+	SUBJOB_COLOR : "207;226;236"
+}
+addSubjob {
+	NAME: "tSendMail_2"
+	SUBJOB_TITLE_COLOR : "92;131;150",
+	SUBJOB_COLOR : "207;226;236"
+}
