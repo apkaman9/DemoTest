@@ -1,0 +1,1015 @@
+SCRIPT_VERSION=4.2,  
+JobType= Big_Data_Batch, 
+Framework= Spark,
+DEFAULT_CONTEXT: Default,  
+ContextType {  
+NAME: Default  
+addContextParameter {
+		NAME: tgt_db_tbls,
+		TYPE: "id_String",
+		VALUE: "tbls",
+		COMMENT: "",
+         PROMPT: "tgt_db_tbls?"	}
+addContextParameter {
+		NAME: dbtables_tbls_Host,
+		TYPE: "id_String",
+		VALUE: "192.168.0.106",
+		COMMENT: "",
+         PROMPT: "dbtables_tbls_Host?"	}
+addContextParameter {
+		NAME: src_db_tbls,
+		TYPE: "id_String",
+		VALUE: "tbls",
+		COMMENT: "",
+         PROMPT: "src_db_tbls?"	}
+addContextParameter {
+		NAME: tgt_table_clm_adm,
+		TYPE: "id_String",
+		VALUE: "clm_adm",
+		COMMENT: "",
+         PROMPT: "tgt_table_clm_adm?"	}
+addContextParameter {
+		NAME: src_table_clm,
+		TYPE: "id_String",
+		VALUE: "clm",
+		COMMENT: "",
+         PROMPT: "src_table_clm?"	}
+addContextParameter {
+		NAME: dbtables_tbls_Port,
+		TYPE: "id_String",
+		VALUE: "10000",
+		COMMENT: "",
+         PROMPT: "dbtables_tbls_Port?"	}
+}  
+addParameters {  
+addElementParameters {  
+JOB_RUN_VM_ARGUMENTS : " -Xms256M -Xmx1024M",  
+SCREEN_OFFSET_X : "0",  
+SCREEN_OFFSET_Y : "0",,,,,,,,,,,,,,,, 
+IMPLICITCONTEXT_USE_PROJECT_SETTINGS : "true",
+STATANDLOG_USE_PROJECT_SETTINGS : "true", 
+MULTI_THREAD_EXECATION : "false",  
+PARALLELIZE_UNIT_SIZE : "25000",  
+IMPLICIT_TCONTEXTLOAD : "false",  
+FROM_FILE_FLAG_IMPLICIT_CONTEXT : "false", 
+FROM_DATABASE_FLAG_IMPLICIT_CONTEXT : "false", 
+IMPLICIT_TCONTEXTLOAD_FILE : "\"\"", 
+FIELDSEPARATOR :  "\"\""  
+URL_IMPLICIT_CONTEXT : """",,  
+DRIVER_CLASS_IMPLICIT_CONTEXT : """",  
+HOST_IMPLICIT_CONTEXT : """",  
+PORT_IMPLICIT_CONTEXT : """",  
+DBNAME_IMPLICIT_CONTEXT : """",  
+LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT : """",  
+PROPERTIES_IMPLICIT_CONTEXT : """",  
+SCHEMA_DB_IMPLICIT_CONTEXT : """",  
+USER_IMPLICIT_CONTEXT : """",  
+PASS_IMPLICIT_CONTEXT : "0RMsyjmybrE=",  
+DBFILE_IMPLICIT_CONTEXT : """",  
+DBTABLE_IMPLICIT_CONTEXT : """",  
+QUERY_CONDITION_IMPLICIT_CONTEXT : """",  
+LOAD_NEW_VARIABLE : "Warning",  
+NOT_LOAD_OLD_VARIABLE : "Warning",  
+PRINT_OPERATIONS : "false",  
+DISABLE_ERROR : "false",  
+DISABLE_WARNINGS : "false",  
+DISABLE_INFO : "false",  
+ON_STATCATCHER_FLAG : "false",  
+ON_LOGCATCHER_FLAG : "false",  
+ON_METERCATCHER_FLAG : "false",  
+ON_CONSOLE_FLAG : "false",  
+ON_FILES_FLAG : "false",  
+FILE_PATH : ""/home/talend/workspace/.metadata"",  
+FILENAME_STATS : ""stats_file.txt"",  
+FILENAME_LOGS : ""logs_file.txt"",  
+FILENAME_METTER : ""meter_file.txt"",  
+ENCODING : "ISO-8859-15",  
+ENCODING:ENCODING_TYPE : "ISO-8859-15",  
+ON_DATABASE_FLAG : "false",  
+DB_TYPE : "tJDBCOutput",  
+DB_VERSION : "ORACLE_11",  
+URL : """",,  
+DRIVER_CLASS : """",  
+HOST : """",  
+PORT : """",  
+DATASOURCE : """",  
+DBNAME : """",  
+LOCAL_SERVICE_NAME : """",  
+PROPERTIES : """",  
+SCHEMA_DB : """",  
+USER : """",  
+PASS : "0RMsyjmybrE=",  
+DBFILE : """",  
+TABLE_STATS : """",  
+TABLE_LOGS : """",  
+TABLE_METER : """",  
+CATCH_RUNTIME_ERRORS : "true",  
+CATCH_USER_ERRORS : "true",  
+CATCH_USER_WARNING : "true",  
+CATCH_REALTIME_STATS : "false",,  
+HEADER_ENABLED : "false",,,,,  
+FOOTER_ENABLED : "false",,,,  
+SPARK_LOCAL_MODE : "true",  
+SPARK_LOCAL_VERSION : "SPARK_2_2_0",  
+SPARK_VERSION : "EMR_5_8_0",  
+SUPPORTED_SPARK_VERSION : "SPARK_2_2_0",,,  
+NOTE : "** The version of Spark must be 1.3.0 or later.",  
+SPARK_API_VERSION : "SPARK_200",  
+SET_HDP_VERSION : "false",  
+HDP_VERSION : ""x.x.x.x-x"",  
+SPARK_MODE : "CLUSTER",  
+RESOURCE_MANAGER : """",  
+SET_SCHEDULER_ADDRESS : "false",  
+RESOURCEMANAGER_SCHEDULER_ADDRESS : """",  
+SET_JOBHISTORY_ADDRESS : "false",  
+JOBHISTORY_ADDRESS : """",  
+SET_STAGING_DIRECTORY : "false",  
+STAGING_DIRECTORY : ""/user"",  
+HDINSIGHT_ENDPOINT : ""https://xxxx.azurehdinsight.net"",  
+HDINSIGHT_USERNAME : """",  
+HDINSIGHT_PASSWORD : "0RMsyjmybrE=",  
+LIVY_HOST : """",  
+LIVY_PORT : ""443"",  
+LIVY_USERNAME : """",  
+HDINSIGHT_USERNAME : """",  
+HDINSIGHT_PASSWORD : "0RMsyjmybrE=",  
+WASB_HOST : """",  
+WASB_CONTAINER : """",  
+WASB_USERNAME : """",  
+WASB_PASSWORD : "0RMsyjmybrE=",  
+REMOTE_FOLDER : """",  
+SPARK_HOST : ""spark://localhost:7077"",  
+SPARK_HOME : ""/usr/lib/spark"",  
+DEFINE_HADOOP_HOME_DIR : "false",  
+HADOOP_HOME_DIR : ""C:/Talend/winutils"",  
+DEFINE_SPARK_DRIVER_HOST : "false",  
+SPARK_DRIVER_HOST : ""127.0.0.1"",  
+GOOGLE_PROJECT_ID : ""my-google-project"",  
+GOOGLE_CLUSTER_ID : ""my-cluster-id"",  
+GOOGLE_REGION : ""global"",  
+GOOGLE_JARS_BUCKET : ""gs://my-bucket/talend/jars"",  
+DEFINE_PATH_TO_GOOGLE_CREDENTIALS : "false",  
+PATH_TO_GOOGLE_CREDENTIALS : """",  
+ALTUS_SET_CREDENTIALS : "false",  
+ALTUS_ACCESS_KEY : """",  
+ALTUS_SECRET_KEY : """",  
+ALTUS_CLI_PATH : ""/opt/altuscli/altusclienv/bin/altus"",  
+ALTUS_REUSE_CLUSTER : "false",  
+ALTUS_CLUSTER_NAME : ""talend-altus-cluster"",  
+ALTUS_CLOUD_PROVIDER : ""AWS"",  
+ALTUS_ENVIRONMENT_NAME : ""talend-altus-cluster"",  
+ALTUS_DELETE_AFTER_EXECUTION : "false",  
+ALTUS_S3_ACCESS_KEY : """",  
+ALTUS_S3_SECRET_KEY : "0RMsyjmybrE=",  
+ALTUS_S3_REGION : ""us-east-1"",  
+ALTUS_BUCKET_NAME : ""my-bucket"",  
+ALTUS_JARS_BUCKET : ""talend/jars/"",  
+ALTUS_AZURE_ADLS_ACCOUNT_FQDN : ""xxxx.azuredatalakestore.net"",  
+ALTUS_AZURE_APP_ID : """",  
+ALTUS_AZURE_TOKEN_ENDPOINT : "0RMsyjmybrE=",  
+ALTUS_AZURE_APP_KEY : "0RMsyjmybrE=",  
+ALTUS_USE_CUSTOM_JSON : "false",  
+ALTUS_CUSTOM_JSON : "{}",  
+ALTUS_INSTANCE_TYPE : ""c4.2xlarge"",  
+ALTUS_AZURE_INSTANCE_TYPE : ""STANDARD_DS12_V2"",  
+ALTUS_WORKER_NODE : ""10"",,,  
+ALTUS_CLOUDERA_MANAGER_USERNAME : ""altus"",,  
+USE_KRB : "false",  
+RESOURCEMANAGER_PRINCIPAL : "yarn/_HOST@EXAMPLE.COM",  
+JOBHISTORY_PRINCIPAL : "mapred/_HOST@EXAMPLE.COM",  
+USE_KEYTAB : "false",  
+PRINCIPAL : ""hdfs"",  
+KEYTAB_PATH : "/tmp/hdfs.headless.keytab",  
+USERNAME : """",  
+USE_MAPRTICKET : "false",  
+MAPRTICKET_PASSWORD : "0RMsyjmybrE=",  
+MAPRTICKET_CLUSTER : "demo.mapr.com",  
+MAPRTICKET_DURATION : "86400L",  
+SET_MAPR_HOME_DIR : "false",  
+MAPR_HOME_DIR : "/opt/mapr",  
+SET_HADOOP_LOGIN : "false",  
+HADOOP_LOGIN : "kerberos",  
+ADVANCED_SETTINGS_CHECK : "false",  
+SPARK_DRIVER_MEM : "512m",  
+SPARK_DRIVER_CORES : "1",  
+SPARK_YARN_AM_SETTINGS_CHECK : "false",  
+SPARK_YARN_AM_MEM : "512m",  
+SPARK_YARN_AM_CORES : "1",  
+SPARK_EXECUTOR_MEM : "512m",  
+SET_SPARK_EXECUTOR_MEM_OVERHEAD : "false",  
+SPARK_EXECUTOR_MEM_OVERHEAD : "384",  
+SPARK_EXECUTOR_CORES_CHECK : "false",  
+SPARK_EXECUTOR_CORES : "1",  
+SPARK_YARN_ALLOC_TYPE : "AUTO",  
+SPARK_EXECUTOR_INSTANCES : "2",  
+SPARK_YARN_DYN_INIT : "1",  
+SPARK_YARN_DYN_MIN : "0",  
+SPARK_YARN_DYN_MAX : "MAX",  
+WEB_UI_PORT_CHECK : "false",  
+WEB_UI_PORT : "4040",  
+SPARK_BROADCAST_FACTORY : "AUTO",  
+CUSTOMIZE_SPARK_SERIALIZER : "false",  
+SPARK_SERIALIZER : "org.apache.spark.serializer.KryoSerializer",  
+ENABLE_SPARK_EVENT_LOGGING : "false",  
+COMPRESS_SPARK_EVENT_LOGS : "false",  
+SPARK_EVENT_LOG_DIR : "hdfs://namenode:8020/user/spark/applicationHistory", 
+SPARKHISTORY_ADDRESS : "sparkHistoryServer:18080",  
+SPARK_SCRATCH_DIR : "\"/tmp\"",  
+WAIT_FOR_THE_JOB_TO_COMPLETE : "true",  
+USE_CHECKPOINT : "false",  
+CHECKPOINT_DIR : "file:///tmp/mycheckpoint",,  
+USE_CLOUDERA_NAVIGATOR : "false",  
+CLOUDERA_NAVIGATOR_USERNAME : "username",  
+CLOUDERA_NAVIGATOR_PASSWORD : "PoLvNyVG2XWndNDdLn696A==",  
+CLOUDERA_NAVIGATOR_URL : ""http://localhost:7187/api/v8/"",  
+CLOUDERA_NAVIGATOR_METADATA_URL :  
+""http://localhost:7187/api/v8/metadata/plugin"",  
+CLOUDERA_NAVIGATOR_CLIENT_URL : ""http://localhost"",  
+CLOUDERA_NAVIGATOR_AUTOCOMMIT : "false",  
+CLOUDERA_NAVIGATOR_DISABLE_SSL_VALIDATION : "false",  
+CLOUDERA_NAVIGATOR_DIE_ON_ERROR : "true",  
+USE_ATLAS : "false",  
+ATLAS_URL : ""http://localhost:21000"",  
+ATLAS_USERNAME : ""admin"",  
+ATLAS_PASSWORD : "0RMsyjmybrE=",  
+SET_ATLAS_APPLICATION_PROPERTIES : "false",  
+ATLAS_APPLICATION_PROPERTIES :  
+""/user/atlas/atlas-application.properties"",  
+ATLAS_DIE_ON_ERROR : "false"  
+}  
+addRoutinesParameters {  
+addRoutinesParameter {  
+NAME: "DataOperation"  
+}  
+addRoutinesParameter {  
+NAME: "Mathematical"  
+}  
+addRoutinesParameter {  
+NAME: "Numeric"  
+}  
+addRoutinesParameter {  
+NAME: "Relational"  
+}  
+addRoutinesParameter {  
+NAME: "SQLike"  
+}  
+addRoutinesParameter {  
+NAME: "StringHandling"  
+}  
+addRoutinesParameter {  
+NAME: "TalendDataGenerator"  
+}  
+addRoutinesParameter {  
+NAME: "TalendDate"  
+}  
+addRoutinesParameter {  
+NAME: "TalendString"  
+}  
+addRoutinesParameter {  
+NAME: "DQTechnical"  
+}
+addRoutinesParameter {
+NAME: "DataMasking"
+}
+addRoutinesParameter {
+NAME: "DataQualityDependencies"
+}
+addRoutinesParameter {
+NAME: "DataQuality"
+}
+addRoutinesParameter {
+NAME: "DqStringHandling"
+}
+addRoutinesParameter {
+NAME: "TalendStringUtil"
+}
+}  
+}  
+addComponent {
+	setComponentDefinition {
+		TYPE: "tHiveConfiguration",
+		NAME: "tHiveConfiguration_1",
+		POSITION: 376, 64,
+		SIZE: 32, 32,
+		OFFSETLABEL: 0, 0
+	}
+	setSettings {
+		DISTRIBUTION : "HORTONWORKS",
+		DB_VERSION : "HDP_2_6",,,
+		ENABLE_HIVE_HA : "false",
+		HOST : "context.dbtables_tbls_Host",
+		PORT : "context.dbtables_tbls_Port",
+		HIVE_METASTORE_URIS : "\"thrift://host1:port1,thrift://host2:port2,...\"",
+		USE_KRB : "false",
+		HIVE_PRINCIPAL : "\"hive/_HOST@EXAMPLE.COM\"",
+		USE_MAPRTICKET : "false",
+		SPARK_CONFIGURATION : "tSparkConfiguration_1",
+		LABEL : "tHiveConfiguration_1",
+		CONNECTION_FORMAT : "row"
+	}
+}
+ addComponent {
+	setComponentDefinition {
+		TYPE: "tHDFSConfiguration",
+		NAME: "tHDFSConfiguration_1",
+		POSITION: 616, 64,
+		SIZE: 32, 32,
+		OFFSETLABEL: 0, 0
+	}
+	setSettings {
+         DISTRIBUTION : "HORTONWORKS",		DB_VERSION : "HDP_2_6",,,
+		FS_DEFAULT_NAME : "\"hdfs://localhost:9000/\"",
+		USE_KRB : "false",
+		NAMENODE_PRINCIPAL : "\"nn/_HOST@EXAMPLE.COM\"",
+		USE_KEYTAB : "false",
+		PRINCIPAL : "\"hdfs\"",
+		KEYTAB_PATH : "\"/tmp/hdfs.headless.keytab\"",
+		USERNAME : "\"\"",
+		GROUP : "\"supergroup\"",
+		USE_DATANODE_HOSTNAME : "true",
+		TEMP_FOLDER : "\"/tmp\"",
+		USE_HDFS_ENCRYPTION : "false",
+		HDFS_ENCRYPTION_KEY_PROVIDER : "\"kms://http@localhost:16000/kms\"",,
+		LABEL : "tHDFSConfiguration_1",
+		CONNECTION_FORMAT : "row"
+	}
+}addComponent {  
+setComponentDefinition {  
+TYPE: "tHiveInput",  
+NAME:"tHiveInput_1",  
+POSITION:356,156,  
+SIZE: 32, 32,  
+OFFSETLABEL: 0, 0  
+}  
+setSettings {  
+USE_EXISTING_CONNECTION : "true",,  
+HIVE_STORAGE_CONFIGURATION : "tHiveConfiguration_1",  
+HDFS_STORAGE_CONFIGURATION : "tHDFSConfiguration_1",  
+CONNECTION : "null",  
+CONNECTION_TYPE : "Hive SID",  
+INPUT_SOURCE : "HIVE_HQL",  
+SQL_QUERY  : "\"select dw_clm_cntrl_key, adjstmt_seq_num, adjstmt_typ_cd from 
+entpril_ps_views_all.clm \"",  
+HIVE_DATABASE_NAME : "context.src_db_tbls",  
+HIVE_TABLE_NAME :  "context.src_table_clm",  
+CONNECTION_TYPE : "Hive SID",  
+RAC_URL : "",  
+HOST : "\"192.168.0.106\"",  
+TYPE : "Hive",  
+PORT : "\"10000\"",  
+SCHEMA_DB : "\"entpril_ps_views_all\"",  
+DBNAME : "context.src_db_tbls",  
+LOCAL_SERVICE_NAME :"\"\"",  
+USER : "\"root\"",  
+PASS : "\"\"",
+JDBC_URL : "jdbc:",  
+TABLE : "\"entpril_ps_views_all.clm\"",  
+QUERYSTORE : "\"\"",,  
+QUERYSTORE:QUERYSTORE_TYPE : "BUILT_IN",  
+GUESS_SCHEMA : "\"\"",  
+QUERY : "\"select dw_clm_cntrl_key, adjstmt_seq_num, adjstmt_typ_cd from 
+entpril_ps_views_all.clm \"",  
+LABEL : "clm_tbls",  
+MAPPING : "id_Hive",  
+PROPERTIES : "\"noDatetimeStringSync=true\"",  
+ENCODING : "\"ISO-8859-15\"",  
+ENCODING:ENCODING_TYPE : "ISO-8859-15",  
+TRIM_ALL_COLUMN : "false",  
+TRIM_COLUMN {                          
+SCHEMA_COLUMN :  "dw_clm_cntrl_key",  
+TRIM : "false",
+SCHEMA_COLUMN :  "adjstmt_seq_num",  
+TRIM : "false",
+SCHEMA_COLUMN :  "adjstmt_typ_cd",  
+TRIM : "false"
+} ,  
+CONNECTION_FORMAT : "row",  
+INFORMATION : "false",  
+VALIDATION_RULES : "false"  
+}                          
+addSchema {                          
+NAME: "tHiveConfiguration_1",  
+TYPE: "FLOW"  
+addColumn { 
+NAME: "dw_clm_cntrl_key",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "dw_clm_cntrl_key",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "adjstmt_seq_num",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "adjstmt_seq_num",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "adjstmt_typ_cd",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "adjstmt_typ_cd",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+
+}                          
+}                          
+addComponent {
+setComponentDefinition {
+TYPE: "tUniqRow",
+NAME: "tUniqRow_1",
+POSITION: 556,156 ,SIZE: 32, 32,
+OFFSETLABEL: 0, 0
+}
+setSettings {
+UNIQUE_KEY {
+SCHEMA_COLUMN : "dw_clm_cntrl_key",
+KEY_ATTRIBUTE : "True",
+CASE_SENSITIVE : "True",
+SCHEMA_COLUMN : "adjstmt_seq_num",
+KEY_ATTRIBUTE : "True",
+CASE_SENSITIVE : "True"
+
+},
+ONLY_ONCE_EACH_DUPLICATED_KEY : "false",
+CONNECTION_FORMAT : "row"
+}
+addSchema {
+NAME: "tUniqRow_1",
+CONNECTOR: "FLOW"
+addColumn { 
+NAME: "dw_clm_cntrl_key",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "dw_clm_cntrl_key",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "adjstmt_seq_num",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "adjstmt_seq_num",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "adjstmt_typ_cd",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "adjstmt_typ_cd",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+
+
+}
+addSchema {
+NAME: "UNIQUE",
+CONNECTOR: "UNIQUE"
+addColumn { 
+NAME: "dw_clm_cntrl_key",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "dw_clm_cntrl_key",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "adjstmt_seq_num",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "adjstmt_seq_num",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "adjstmt_typ_cd",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "adjstmt_typ_cd",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+
+
+}
+addSchema {
+NAME: "DUPLICATE",
+CONNECTOR: "DUPLICATE"
+addColumn { 
+NAME: "dw_clm_cntrl_key",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "dw_clm_cntrl_key",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "adjstmt_seq_num",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "adjstmt_seq_num",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "adjstmt_typ_cd",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "adjstmt_typ_cd",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+
+
+}
+}
+addComponent {
+ setComponentDefinition {
+     TYPE: "tMap",
+     NAME: "tMap_1",
+     POSITION: 806,156 ,     SIZE: 32, 32,
+     OFFSETLABEL: 0, 0
+}
+ setSettings {
+     MAP : "",
+     LINK_STYLE : "AUTO",,
+     PREVIEW : "_OMvucBwDEeqmZ_b5scZyug-tMap_1-PREVIEW.bmp",
+     DIE_ON_ERROR : "true",
+     LKUP_PARALLELIZE : "false",
+     ROWS_BUFFER_SIZE : "2000000",
+     CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL : "false",
+     CONNECTION_FORMAT : "row",
+     INFORMATION : "false",,
+     VALIDATION_RULES : "false"
+  }
+ addSchema {
+ NAME: "Hive_output",
+  TYPE: "FLOW"
+addColumn { 
+NAME: "day_cnt",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "day_cnt",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+
+addColumn { 
+NAME: "adm_util_typ_cd",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "adm_util_typ_cd",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+
+addColumn { 
+NAME: "dw_clm_key",
+TYPE: "id_Integer",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "dw_clm_key",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+
+addColumn { 
+NAME: "pd_dt",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "pd_dt",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+
+   }
+addMapperData {
+         addUiProperties {
+         SHELLMAXIMIZED: false
+   }
+addInputTable {
+         NAME: "tUniqRow_1",
+         SIZESTATE: INTERMEDIATE,
+         MATCHINGMODE: "UNIQUE_MATCH",
+         LOOKUPMODE: "LOAD_ONCE"
+addColumn { 
+         NAME: "dw_clm_cntrl_key",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "adjstmt_seq_num",
+         TYPE: "id_String"
+} 
+addColumn { 
+         NAME: "adjstmt_typ_cd",
+         TYPE: "id_String"
+} 
+    }
+     addVarTable {
+           NAME: "Var",
+           MINIMIZED: true,
+           SIZESTATE: INTERMEDIATE
+     }
+    addOutputTable {
+         ID: "",
+ NAME: "clm_adm_tbls1",
+         SIZESTATE: INTERMEDIATE
+         addColumn {
+NAME: "day_cnt",
+TYPE: "id_String",
+NULLABLE: false,
+EXPRESSION: "tUniqRow_1.dw_clm_cntrl_key "
+         }
+         addColumn {
+NAME: "adm_util_typ_cd",
+TYPE: "id_String",
+NULLABLE: false,
+EXPRESSION: "tUniqRow_1.adjstmt_seq_num "
+         }
+         addColumn {
+NAME: "dw_clm_key",
+TYPE: "id_String",
+NULLABLE: false,
+EXPRESSION: "tUniqRow_1.adjstmt_typ_cd "
+         }
+    }
+ }
+    }
+ addComponent {
+setComponentDefinition {
+TYPE: "tHiveOutput",
+NAME: "tHiveOutput_1",
+POSITION: 1056,156 ,SIZE: 32, 32,
+OFFSETLABEL: 0, 0
+}
+setSettings {
+END_OF_FLOW : "true",
+USE_EXISTING_CONNECTION : "true",,
+HOST : "\"192.168.0.106\"",  
+PORT : "\"10000\"",  
+CONNECTION : "tHiveConfiguration_1",  
+SCHEMA_DB : "\"entpril_ps_views_all\"",  
+HIVE_STORAGE_CONFIGURATION : "tHiveConfiguration_1",  
+HDFS_STORAGE_CONFIGURATION : "tHDFSConfiguration_1",  
+SAVEMODE : "Create",
+HIVE_DATABASE_NAME : "context.tgt_db_tbls",  
+HIVE_TABLE_NAME : "context.tgt_table_clm_adm",  
+DBNAME : "context.tgt_db_tbls",  
+TYPE : "Hive",
+USER : "\"root\"",  
+PASS : "\"\"",
+TABLE : "\"entpril_ps_views_all.clm_adm\"",  
+IDENTITY_INSERT : "false",
+LABEL : "clm_adm_tbls",  
+NOTE :
+"NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns",
+SPECIFY_IDENTITY_FIELD : "false",
+IDENTITY_FIELD : "day_cnt",
+START_VALUE : "1",
+STEP : "1",
+DIE_ON_ERROR : "false",
+MAPPING : "id_Hive",
+PROPERTIES : "\"\"",
+ENCODING : "\"ISO-8859-15\"",  
+ENCODING:ENCODING_TYPE : "ISO-8859-15",
+COMMIT_EVERY : "10000",,
+USE_FIELD_OPTIONS : "false",
+FIELD_OPTIONS {
+SCHEMA_COLUMN : "day_cnt",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true",
+SCHEMA_COLUMN : "adm_util_typ_cd",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true",
+SCHEMA_COLUMN : "dw_clm_key",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true",
+SCHEMA_COLUMN : "pd_dt",
+UPDATE_KEY : "false",
+DELETE_KEY : "false",
+UPDATABLE : "true",
+INSERTABLE : "true"
+},
+IGNORE_DATE_OUTOF_RANGE : "false",
+ENABLE_DEBUG_MODE : "false",
+SUPPORT_NULL_WHERE : "false",
+USE_BATCH_SIZE : "true",
+BATCH_SIZE : "10000",
+CONNECTION_FORMAT : "row",
+INFORMATION : "false",,
+VALIDATION_RULES : "false"
+}
+addSchema {
+NAME: "clm_adm_tbls",
+TYPE: "FLOW"
+addColumn { 
+NAME: "day_cnt",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "day_cnt",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "adm_util_typ_cd",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "adm_util_typ_cd",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "dw_clm_key",
+TYPE: "id_Integer",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "dw_clm_key",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "pd_dt",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "pd_dt",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+
+}
+addSchema {
+NAME: "REJECT",
+TYPE: "REJECT"
+addColumn { 
+NAME: "day_cnt",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "day_cnt",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "adm_util_typ_cd",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "adm_util_typ_cd",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "dw_clm_key",
+TYPE: "id_Integer",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "dw_clm_key",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+addColumn { 
+NAME: "pd_dt",
+TYPE: "id_String",  
+KEY: false,  
+NULLABLE: false,
+DEFAULTVALUE: ,
+LENGTH: 10,
+COMMENT: "",
+ORIGINALDBCOLUMNNAME "pd_dt",
+PATTERN: "",
+PRECISION: -1,
+SOURCETYPE: "VARCHAR"
+         } 
+
+addColumn {
+NAME: "errorCode",
+TYPE: "id_String",
+NULLABLE: true,
+DEFAULTVALUE: "",
+LENGTH: 255,
+SOURCETYPE: "VARCHAR"
+}
+addColumn {
+NAME: "errorMessage",
+TYPE: "id_String",
+NULLABLE: true,
+DEFAULTVALUE: "",
+LENGTH: 255,
+SOURCETYPE: "VARCHAR"
+}
+}
+}
+addConnection {
+ TYPE: "FLOW",
+ NAME: "clm_adm_tbls1",
+ METANAME: "Hive_output",
+ SOURCE: "tMap_1",
+ TARGET: "tHiveOutput_1",
+ OFFSETLABEL: 0, 0,
+ UNIQUE_NAME : clm_adm_tbls,
+ TRACES_CONNECTION_FILTER {
+     TRACE_COLUMN : "day_cnt",
+     TRACE_COLUMN : "adm_util_typ_cd",
+     TRACE_COLUMN : "dw_clm_key"
+}, MONITOR_CONNECTION : "false",
+ USEROWLABEL : "true",
+ METTERLABEL : "\"MyLabel\"",
+ ABSOLUTE : "Absolute",
+ PARTITIONER : "false",
+ DEPARTITIONER : "false",
+ REPARTITIONER : "false",
+ NONE : "true",
+ NUM_PARTITIONS : "5",
+ PART_QUEUE_SIZE : "1000",
+ HASH_PARTITION : "false",
+ DEPART_QUEUE_SIZE : "1000",
+ IS_SORTING : "true",
+ ACTIVATE : "true",
+ TRACES_CONNECTION_ENABLE : "true",
+ RESUMING_CHECKPOINT : "false",
+ ACTIVEBREAKPOINT : "false",
+ LOGICAL_OP : "&&",
+ USE_ADVANCED : "false",
+ ADVANCED_COND : "// code sample : use input_row to define the condition.
+// input_row.columnName1.equals(\"foo\") ||!(input_row.columnName2.equals(\"bar\"))
+// replace the following expression by your own filter condition 
+input_row.columnName1.equals(input_row.columnName2)
+      "
+}
+addConnection {
+ TYPE: "FLOW",
+ NAME: "row1",
+ METANAME: "ADS_MM_VERSION",
+ SOURCE: "tHiveInput_1",
+ TARGET: "tUniqRow_1",
+ OFFSETLABEL: 0, 0,
+ UNIQUE_NAME : "row1",
+ TRACES_CONNECTION_FILTER {
+     TRACE_COLUMN : "dw_clm_cntrl_key",
+
+     TRACE_COLUMN : "adjstmt_seq_num",
+
+     TRACE_COLUMN : "adjstmt_typ_cd"
+
+}, MONITOR_CONNECTION : "false",
+ USEROWLABEL : "true",
+ METTERLABEL : "\"MyLabel\"",
+ ABSOLUTE : "Absolute",
+ PARTITIONER : "false",
+ DEPARTITIONER : "false",
+ REPARTITIONER : "false",
+ NONE : "true",
+ NUM_PARTITIONS : "5",
+ PART_QUEUE_SIZE : "1000",
+ HASH_PARTITION : "false",
+ DEPART_QUEUE_SIZE : "1000",
+ IS_SORTING : "true",
+ ACTIVATE : "true",
+ TRACES_CONNECTION_ENABLE : "true",
+ RESUMING_CHECKPOINT : "false",
+ ACTIVEBREAKPOINT : "false",
+ LOGICAL_OP : "&&",
+ USE_ADVANCED : "false",
+ ADVANCED_COND : "// code sample : use input_row to define the condition.
+// input_row.columnName1.equals(\"foo\") ||!(input_row.columnName2.equals(\"bar\"))
+// replace the following expression by your own filter condition 
+input_row.columnName1.equals(input_row.columnName2)
+      "
+}
+addConnection {
+TYPE: "UNIQUE",
+NAME: "tUniqRow_1",
+LINESTYLE: 0,
+METANAME: "UNIQUE",
+SOURCE: "tUniqRow_1",
+TARGET: "tMap_1",
+OFFSETLABEL: 0, 0,,
+MONITOR_CONNECTION : "false"
+}
+addNote {
+OPAQUE: true,
+TEXT:"",
+POSITION: 1024, 32,
+SIZE: (96,64)
+}
